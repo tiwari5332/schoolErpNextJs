@@ -1,7 +1,7 @@
 "use client";
 // features/landing/AttendanceSection.tsx
 import { useCallback } from "react";
-import { ArrowRight, Clock, Bell, BarChart3, Smartphone, Zap, CheckCircle, Badge as LucideBadge } from "lucide-react";
+import { ArrowRight, Clock, Bell, BarChart3, Smartphone, Zap, CheckCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";

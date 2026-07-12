@@ -2,10 +2,9 @@
 // All static data arrays live here — module-level, created once, never recreated on re-render.
 import {
   GraduationCap, Users, BarChart3, MessageSquare, Calendar,
-  TrendingUp, Shield, Zap, Clock, CheckCircle, Star, Award,
-  Smartphone, Globe, Brain, Heart, BookOpen, DollarSign,
-  Sparkles, Target, PieChart, Video, Bell, Camera, Wallet,
-  LineChart,
+  TrendingUp, Shield, Zap, Clock, Award,
+  Smartphone, Brain, Heart, BookOpen, DollarSign,
+  Video, Bell, Camera, Wallet,
 } from "lucide-react";
 import type { Feature, Stat, PricingPlan, Testimonial, Benefit, PortalShowcase } from "@/types/landing";
 

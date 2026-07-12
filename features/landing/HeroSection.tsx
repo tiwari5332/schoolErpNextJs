@@ -1,6 +1,5 @@
 "use client";
 // features/landing/HeroSection.tsx
-import { useCallback } from "react";
 import { ArrowRight, Video, GraduationCap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -10,13 +9,10 @@ import { STATS } from "./constants";
 
 interface HeroSectionProps {
   onGetStarted: () => void;
+  onScheduleDemo: () => void;
 }
 
-export function HeroSection({ onGetStarted }: HeroSectionProps) {
-  const handleScrollToDemo = useCallback(() => {
-    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
-  }, []);
-
+export function HeroSection({ onGetStarted, onScheduleDemo }: HeroSectionProps) {
   return (
     <section
       className="pt-32 pb-20 px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-cyan-50"
@@ -57,9 +53,9 @@ export function HeroSection({ onGetStarted }: HeroSectionProps) {
                 size="lg"
                 variant="outline"
                 className="border-slate-300 hover:bg-white"
-                onClick={handleScrollToDemo}
+                onClick={onScheduleDemo}
               >
-                Watch Demo
+                Schedule Demo
                 <Video className="h-5 w-5 ml-2" aria-hidden="true" />
               </Button>
             </div>
@@ -91,7 +87,7 @@ export function HeroSection({ onGetStarted }: HeroSectionProps) {
                     />
                     <p className="font-medium">Interactive Demo</p>
                     <p className="text-sm opacity-90">
-                      Click &quot;Watch Demo&quot; to see it in action
+                      Click &quot;Schedule Demo&quot; to book a walkthrough
                     </p>
                   </div>
                 </div>

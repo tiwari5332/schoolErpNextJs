@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { SectionErrorBoundary } from "@/components/shared/SectionErrorBoundary";
 import { NavBar } from "./NavBar";
 import { HeroSection } from "./HeroSection";
@@ -12,19 +12,26 @@ import { PricingSection } from "./PricingSection";
 import { TestimonialsSection } from "./TestimonialsSection";
 import { CtaSection } from "./CtaSection";
 import { Footer } from "./Footer";
+import { ScheduleDemoModal } from "@/components/shared/ScheduleDemoModal";
 
 interface LandingPageProps {
   onGetStarted?: () => void;
 }
 
 export function LandingPage({ onGetStarted }: LandingPageProps) {
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
+
   const handleGetStarted = useCallback(() => {
     if (onGetStarted) {
       onGetStarted();
     } else {
-      document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+      setIsDemoModalOpen(true);
     }
   }, [onGetStarted]);
+
+  const handleCloseDemoModal = useCallback(() => {
+    setIsDemoModalOpen(false);
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -34,7 +41,10 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
 
       <main>
         <SectionErrorBoundary>
-          <HeroSection onGetStarted={handleGetStarted} />
+          <HeroSection
+            onGetStarted={handleGetStarted}
+            onScheduleDemo={handleGetStarted}
+          />
         </SectionErrorBoundary>
 
         <SectionErrorBoundary>
@@ -69,6 +79,8 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
       <SectionErrorBoundary>
         <Footer />
       </SectionErrorBoundary>
+
+      <ScheduleDemoModal isOpen={isDemoModalOpen} onClose={handleCloseDemoModal} />
     </div>
   );
 }
