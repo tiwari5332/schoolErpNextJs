@@ -54,10 +54,17 @@ export function ShowcaseSection({ onGetStarted }: ShowcaseSectionProps) {
 
             const content = (
               <div className="space-y-6">
-                <Badge className={cn("px-3 py-1", COLOR_CLASSES[portal.badgeColor].badge)}>
-                  <BadgeIconComp className="h-3 w-3 mr-1" aria-hidden="true" />
-                  {portal.badge}
-                </Badge>
+                <div className="flex flex-wrap gap-2 items-center">
+                  <Badge className={cn("px-3 py-1", COLOR_CLASSES[portal.badgeColor].badge)}>
+                    <BadgeIconComp className="h-3 w-3 mr-1" aria-hidden="true" />
+                    {portal.badge}
+                  </Badge>
+                  {portal.comingSoon && (
+                    <Badge className="bg-amber-100 text-amber-800 border border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-900/60 px-3 py-1 font-medium text-xs tracking-wide">
+                      Coming Soon
+                    </Badge>
+                  )}
+                </div>
                 <h3 className="font-bold text-slate-900">{portal.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{portal.description}</p>
                 <ul className="space-y-3" aria-label={`${portal.badge} features`}>
@@ -71,10 +78,16 @@ export function ShowcaseSection({ onGetStarted }: ShowcaseSectionProps) {
                     </li>
                   ))}
                 </ul>
-                <Button className={colors.button} onClick={handleGetStarted}>
-                  {portal.ctaLabel}
-                  <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
-                </Button>
+                {portal.comingSoon ? (
+                  <Button className="bg-slate-100 dark:bg-slate-800/80 text-slate-400 dark:text-slate-500 border border-slate-200 dark:border-slate-700/60 cursor-not-allowed hover:bg-slate-100 font-medium shadow-none" disabled>
+                    Coming Soon
+                  </Button>
+                ) : (
+                  <Button className={colors.button} onClick={handleGetStarted}>
+                    {portal.ctaLabel}
+                    <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
+                  </Button>
+                )}
               </div>
             );
 

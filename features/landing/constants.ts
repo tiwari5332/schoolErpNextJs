@@ -178,6 +178,7 @@ export const PORTAL_SHOWCASES: PortalShowcase[] = [
     imageSrc: "https://images.unsplash.com/photo-1771408427146-09be9a1d4535?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwb25saW5lJTIwbGVhcm5pbmclMjBsYXB0b3B8ZW58MXx8fHwxNzcyMzQ5NDA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
     imageAlt: "Student Portal",
     imageFirst: true,
+    comingSoon: true,
   },
   {
     badge: "Parent Portal",

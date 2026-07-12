@@ -63,6 +63,7 @@ export interface PortalShowcase {
   imageSrc: string;
   imageAlt: string;
   imageFirst: boolean;
+  comingSoon?: boolean;
 }
 
 /** Static color-class map — keeps Tailwind classes as literal strings so the purge scanner finds them. */
