@@ -35,7 +35,7 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
     schoolName: "",
     schoolSize: "250-500",
     email: "",
-    phone: "",
+    phone: "+91 ",
     dateTime: "",
     message: "",
   });
@@ -43,6 +43,7 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [meetLink, setMeetLink] = useState("");
   const [animateShow, setAnimateShow] = useState(false);
 
   // Smooth animation trigger on open
@@ -70,6 +71,24 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+
+    if (name === "phone") {
+      let typedPart = value;
+      if (!value.startsWith("+91 ")) {
+        typedPart = "+91 ";
+      }
+      const suffix = typedPart.substring(4);
+      const digitsOnly = suffix.replace(/\D/g, "");
+      const limitedDigits = digitsOnly.slice(0, 10);
+      const newVal = "+91 " + limitedDigits;
+      
+      setFormValues((prev) => ({ ...prev, phone: newVal }));
+      if (errors.phone) {
+        setErrors((prev) => ({ ...prev, phone: undefined }));
+      }
+      return;
+    }
+
     setFormValues((prev) => ({ ...prev, [name]: value }));
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
@@ -83,14 +102,20 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
     
     if (!formValues.email.trim()) {
       newErrors.email = "Work email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formValues.email)) {
-      newErrors.email = "Please enter a valid email address";
+    } else if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(formValues.email)) {
+      newErrors.email = "Please enter a valid Gmail address (e.g., user@gmail.com)";
     }
 
-    if (!formValues.phone.trim()) {
+    if (!formValues.phone.trim() || formValues.phone.trim() === "+91") {
       newErrors.phone = "Phone number is required";
-    } else if (!/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/.test(formValues.phone)) {
-      newErrors.phone = "Please enter a valid phone number";
+    } else {
+      let cleanPhone = formValues.phone.replace(/[\s\-\+\(\)]/g, "");
+      if (cleanPhone.startsWith("91")) {
+        cleanPhone = cleanPhone.slice(2);
+      }
+      if (!/^\d{10}$/.test(cleanPhone)) {
+        newErrors.phone = "Please enter a valid 10-digit mobile number";
+      }
     }
 
     if (!formValues.dateTime) {
@@ -118,6 +143,7 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
 
       const data = await response.json();
       if (data.success) {
+        setMeetLink(data.meetLink || "");
         setIsSuccess(true);
       } else {
         alert(data.error || "Failed to schedule demo. Please try again.");
@@ -136,11 +162,12 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
       schoolName: "",
       schoolSize: "250-500",
       email: "",
-      phone: "",
+      phone: "+91 ",
       dateTime: "",
       message: "",
     });
     setErrors({});
+    setMeetLink("");
     setIsSuccess(false);
   }, []);
 
@@ -399,6 +426,19 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
                   {new Date(formValues.dateTime).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })}
                 </span>
               </div>
+              {meetLink && (
+                <div className="pt-2 border-t border-slate-200/50 dark:border-slate-700/50 flex flex-col gap-1">
+                  <span className="text-slate-400 text-xs">Google Meet Link:</span>
+                  <a
+                    href={meetLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline break-all"
+                  >
+                    {meetLink}
+                  </a>
+                </div>
+              )}
             </div>
 
             <Button
