@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button";
 
 interface CtaSectionProps {
   onGetStarted: () => void;
+  onScheduleDemo: () => void;
 }
 
-export function CtaSection({ onGetStarted }: CtaSectionProps) {
+export function CtaSection({ onGetStarted, onScheduleDemo }: CtaSectionProps) {
   const handleGetStarted = useCallback(() => onGetStarted(), [onGetStarted]);
+  const handleScheduleDemo = useCallback(() => onScheduleDemo(), [onScheduleDemo]);
 
   return (
     <section
@@ -35,6 +37,7 @@ export function CtaSection({ onGetStarted }: CtaSectionProps) {
             <ArrowRight className="h-5 w-5 ml-2" aria-hidden="true" />
           </Button>
           <Button
+            onClick={handleScheduleDemo}
             size="lg"
             variant="outline"
             className="border-white text-indigo-600 hover:bg-white/10 hover:text-white cursor-pointer"

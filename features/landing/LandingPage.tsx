@@ -72,7 +72,10 @@ export function LandingPage({ onGetStarted }: LandingPageProps) {
         </SectionErrorBoundary>
 
         <SectionErrorBoundary>
-          <CtaSection onGetStarted={handleGetStarted} />
+          <CtaSection
+            onGetStarted={handleGetStarted}
+            onScheduleDemo={handleGetStarted}
+          />
         </SectionErrorBoundary>
       </main>
 
