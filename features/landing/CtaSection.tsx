@@ -16,7 +16,7 @@ export function CtaSection({ onGetStarted, onScheduleDemo }: CtaSectionProps) {
   return (
     <section
       id="demo"
-      className="py-20 px-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600"
+      className="py-20 px-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700"
       aria-labelledby="cta-heading"
     >
       <div className="max-w-4xl mx-auto text-center text-white">
@@ -31,7 +31,7 @@ export function CtaSection({ onGetStarted, onScheduleDemo }: CtaSectionProps) {
           <Button
             onClick={handleGetStarted}
             size="lg"
-            className="bg-white text-indigo-600 hover:bg-indigo-50 shadow-xl hover:bg-white/10 hover:text-white cursor-pointer"
+            className="bg-white text-indigo-600 hover:bg-slate-100 shadow-xl cursor-pointer"
           >
             Start Free Trial
             <ArrowRight className="h-5 w-5 ml-2" aria-hidden="true" />
@@ -39,8 +39,7 @@ export function CtaSection({ onGetStarted, onScheduleDemo }: CtaSectionProps) {
           <Button
             onClick={handleScheduleDemo}
             size="lg"
-            variant="outline"
-            className="border-white text-indigo-600 hover:bg-white/10 hover:text-white cursor-pointer"
+            className="bg-transparent text-white hover:bg-white/10 shadow-xl cursor-pointer border border-white/40"
           >
             Schedule Demo
             <Calendar className="h-5 w-5 ml-2" aria-hidden="true" />

@@ -8,7 +8,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-20 px-6 bg-gradient-to-br from-indigo-50 to-purple-50"
+      className="py-20 px-6 bg-slate-50/70 border-b border-slate-200/50"
       aria-labelledby="testimonials-heading"
     >
       <div className="max-w-7xl mx-auto">

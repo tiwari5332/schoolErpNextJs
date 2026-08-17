@@ -11,6 +11,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 import { COLOR_CLASSES } from "@/types/landing";
 import { PORTAL_SHOWCASES } from "./constants";
 import { cn } from "@/lib/utils";
+import { AdminDashboardMockup } from "@/components/shared/AdminDashboardMockup";
 
 interface ShowcaseSectionProps {
   onGetStarted: () => void;
@@ -21,7 +22,8 @@ export function ShowcaseSection({ onGetStarted }: ShowcaseSectionProps) {
 
   return (
     <section
-      className="py-20 px-6 bg-gradient-to-br from-slate-50 to-indigo-50"
+      id="portals"
+      className="py-20 px-6 bg-slate-50/70 border-b border-slate-200/50"
       aria-labelledby="showcase-heading"
     >
       <div className="max-w-7xl mx-auto">

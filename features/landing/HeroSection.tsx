@@ -1,11 +1,10 @@
-"use client";
-// features/landing/HeroSection.tsx
-import { ArrowRight, Video, GraduationCap } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { ArrowRight, Video, GraduationCap, ShieldCheck, Lock, CheckCircle2, Users, Bell, Clock, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles } from "lucide-react";
 import { STATS } from "./constants";
+import { AdminDashboardMockup } from "@/components/shared/AdminDashboardMockup";
 
 interface HeroSectionProps {
   onGetStarted: () => void;
@@ -13,9 +12,24 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ onGetStarted, onScheduleDemo }: HeroSectionProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(0.5);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const updateScale = () => {
+      const parentWidth = containerRef.current?.getBoundingClientRect().width || 500;
+      setScale(parentWidth / 1000);
+    };
+
+    updateScale();
+    window.addEventListener("resize", updateScale);
+    return () => window.removeEventListener("resize", updateScale);
+  }, []);
+
   return (
     <section
-      className="pt-32 pb-20 px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-cyan-50"
+      className="pt-32 pb-20 px-6 bg-[#F8FAFC] border-b border-slate-200/50"
       aria-labelledby="hero-heading"
     >
       <div className="max-w-7xl mx-auto">
@@ -29,7 +43,7 @@ export function HeroSection({ onGetStarted, onScheduleDemo }: HeroSectionProps) 
             <div>
               <h1
                 id="hero-heading"
-                className="font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6"
+                className="font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6 animate-none"
               >
                 The Complete School Management Platform
               </h1>
@@ -44,7 +58,7 @@ export function HeroSection({ onGetStarted, onScheduleDemo }: HeroSectionProps) 
               <Button
                 onClick={onGetStarted}
                 size="lg"
-                className="gradient-indigo text-white shadow-colored-indigo hover:scale-[1.02] transition-all duration-200"
+                className="gradient-indigo text-white shadow-colored-indigo hover:scale-[1.02] transition-all duration-200 cursor-pointer"
               >
                 Start Free Trial
                 <ArrowRight className="h-5 w-5 ml-2" aria-hidden="true" />
@@ -52,7 +66,7 @@ export function HeroSection({ onGetStarted, onScheduleDemo }: HeroSectionProps) 
               <Button
                 size="lg"
                 variant="outline"
-                className="border-slate-300 hover:bg-white"
+                className="border-slate-300 hover:bg-white cursor-pointer"
                 onClick={onScheduleDemo}
               >
                 Schedule Demo
@@ -72,27 +86,41 @@ export function HeroSection({ onGetStarted, onScheduleDemo }: HeroSectionProps) 
                 </div>
               ))}
             </div>
+
+            {/* B2B Trust & Compliance Badges */}
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-6 gap-y-3 pt-6 border-t border-slate-200/60 text-slate-500 font-semibold text-[11px] uppercase tracking-wider">
+              <span className="flex items-center gap-1.5 hover:text-slate-800 transition-colors">
+                <ShieldCheck className="h-4 w-4 text-emerald-600" />
+                FERPA & COPPA Compliant
+              </span>
+              <span className="flex items-center gap-1.5 hover:text-slate-800 transition-colors">
+                <Lock className="h-3.5 w-3.5 text-emerald-600" />
+                End-to-End SSL Security
+              </span>
+              <span className="flex items-center gap-1.5 hover:text-slate-800 transition-colors">
+                <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
+                99.9% Uptime SLA
+              </span>
+            </div>
           </div>
 
-          {/* Right: Demo preview */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl blur-3xl opacity-20 animate-pulse-slow" />
-            <Card className="relative border-0 shadow-2xl glass-card">
-              <CardContent className="p-8">
-                <div className="aspect-video bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <GraduationCap
-                      className="h-20 w-20 mx-auto mb-4 animate-float"
-                      aria-hidden="true"
-                    />
-                    <p className="font-medium">Interactive Demo</p>
-                    <p className="text-sm opacity-90">
-                      Click &quot;Schedule Demo&quot; to book a walkthrough
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+          {/* Right: Simulated School Admin Dashboard */}
+          <div className="relative w-full lg:scale-105 transition-transform duration-300 animate-none" ref={containerRef}>
+            {/* Soft decorative background glows */}
+            <div className="absolute -top-10 -right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl" />
+
+            <div
+              className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-200/80 bg-[#F8FAFC]"
+              style={{ height: `${700 * scale}px` }}
+            >
+              <div
+                className="absolute top-0 left-0 w-[950px] h-[800px] origin-top-left"
+                style={{ transform: `scale(${scale})` }}
+              >
+                <AdminDashboardMockup />
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 // features/landing/PricingSection.tsx
 // Isolated "use client" — only this section re-renders on billing toggle
 import { useState, useCallback } from "react";
-import { ArrowRight, Star, Target } from "lucide-react";
+import { ArrowRight, Star, Target, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -23,7 +23,7 @@ export function PricingSection({ onGetStarted }: PricingSectionProps) {
   const handleGetStarted = useCallback(() => onGetStarted(), [onGetStarted]);
 
   return (
-    <section id="pricing" className="py-20 px-6 bg-white" aria-labelledby="pricing-heading">
+    <section id="pricing" className="py-20 px-6 bg-white border-b border-slate-200/50" aria-labelledby="pricing-heading">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           badge="Flexible Pricing"
@@ -145,15 +145,28 @@ export function PricingSection({ onGetStarted }: PricingSectionProps) {
           })}
         </div>
 
+        {/* Onboarding & Migration Guarantee Callout */}
+        <div className="mt-16 max-w-4xl mx-auto bg-gradient-to-br from-indigo-50/60 to-purple-50/60 border border-indigo-100 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 text-left shadow-sm">
+          <div className="h-14 w-14 bg-white rounded-2xl flex items-center justify-center text-indigo-600 shadow-sm flex-shrink-0 border border-slate-100">
+            <Sparkles className="h-6 w-6 text-indigo-600" />
+          </div>
+          <div className="space-y-1">
+            <h4 className="font-bold text-slate-900 text-base">Free Data Migration & Full Onboarding Support</h4>
+            <p className="text-slate-600 text-xs md:text-sm leading-relaxed">
+              Dread the transition? Don&apos;t be. Our dedicated onboarding team handles 100% of your data migration from legacy software or spreadsheets into EduTrio within 48 hours, free of charge.
+            </p>
+          </div>
+        </div>
+
         <div className="mt-12 text-center">
-          <p className="text-sm text-slate-600 mb-4">
+          <p className="text-sm text-slate-600 mb-4 font-medium">
             All plans include: • Free onboarding • Data migration • Training sessions • Email support
           </p>
           <p className="text-xs text-slate-500">
             Need a custom plan?{" "}
             <button
               onClick={handleGetStarted}
-              className="text-indigo-600 hover:text-indigo-700 font-medium underline-offset-2 hover:underline"
+              className="text-indigo-600 hover:text-indigo-700 font-bold underline-offset-2 hover:underline cursor-pointer"
             >
               Contact our sales team
             </button>

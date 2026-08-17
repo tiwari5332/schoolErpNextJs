@@ -5,7 +5,7 @@ import { BENEFITS } from "./constants";
 
 export function BenefitsSection() {
   return (
-    <section className="py-20 px-6 bg-white" aria-labelledby="benefits-heading">
+    <section className="py-20 px-6 bg-white border-b border-slate-200/50" aria-labelledby="benefits-heading">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           badge="Why Choose EduTrio"

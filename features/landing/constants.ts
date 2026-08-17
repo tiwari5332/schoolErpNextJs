@@ -4,7 +4,7 @@ import {
   GraduationCap, Users, BarChart3, MessageSquare, Calendar,
   TrendingUp, Shield, Zap, Clock, Award,
   Smartphone, Brain, Heart, BookOpen, DollarSign,
-  Video, Bell, Camera, Wallet,
+  Video, Bell, Camera, Wallet, FileText, Sparkles,
 } from "lucide-react";
 import type { Feature, Stat, PricingPlan, Testimonial, Benefit, PortalShowcase } from "@/types/landing";
 
@@ -12,6 +12,7 @@ export const FEATURES: Feature[] = [
   { icon: Users,        title: "Student Management",   description: "Complete student information system with attendance tracking, grade management, and performance analytics.", color: "indigo"  },
   { icon: GraduationCap,title: "Academic Excellence",  description: "Comprehensive test scoring, homework tracking, and curriculum management tools for better learning outcomes.", color: "purple"  },
   { icon: MessageSquare,title: "Parent Portal",        description: "Real-time communication between parents and teachers with instant notifications and progress updates.",       color: "emerald" },
+  { icon: Sparkles,     title: "AI Exam Builder",      description: "Generate customized exam papers, quizzes, and practice tests aligned with curriculum boards in seconds.",     color: "purple"  },
   { icon: Brain,        title: "AI Analytics",         description: "Predictive insights, performance forecasting, and intelligent recommendations powered by advanced AI.",       color: "cyan"    },
   { icon: Wallet,       title: "Finance Management",   description: "Complete fee management, payment tracking, budget monitoring, and financial reporting system.",                color: "amber"   },
   { icon: Calendar,     title: "Timetable & Events",   description: "Automated timetable generation, event scheduling, and calendar management for entire institution.",           color: "rose"    },
@@ -44,8 +45,10 @@ export const PRICING_PLANS: PricingPlan[] = [
       { name: "Parent portal",          included: true  },
       { name: "Basic reporting",        included: true  },
       { name: "Email support",          included: true  },
+      { name: "AI Exam Builder",        included: false },
       { name: "AI analytics",           included: false },
-      { name: "Finance management",     included: false },
+      { name: "Finance & Fee management", included: false },
+      { name: "Bulk Parent Messaging",  included: false },
       { name: "Mobile apps",            included: false },
       { name: "Custom branding",        included: false },
       { name: "API access",             included: false },
@@ -65,8 +68,10 @@ export const PRICING_PLANS: PricingPlan[] = [
       { name: "Parent portal",             included: true  },
       { name: "Advanced reporting",         included: true  },
       { name: "Priority email support",     included: true  },
+      { name: "AI Exam Builder",            included: true  },
       { name: "AI analytics",               included: true  },
-      { name: "Finance management",         included: true  },
+      { name: "Finance & Fee management",   included: true  },
+      { name: "Bulk Parent Messaging",      included: true  },
       { name: "Mobile apps",               included: true  },
       { name: "Custom branding",           included: true  },
       { name: "API access",                included: false },
@@ -86,8 +91,10 @@ export const PRICING_PLANS: PricingPlan[] = [
       { name: "Parent portal",                  included: true },
       { name: "Custom reporting",               included: true },
       { name: "24/7 phone & email support",     included: true },
+      { name: "AI Exam Builder",                included: true },
       { name: "AI analytics & insights",        included: true },
-      { name: "Finance management",             included: true },
+      { name: "Finance & Fee management",       included: true },
+      { name: "Bulk Parent Messaging",          included: true },
       { name: "Mobile apps (white-label)",      included: true },
       { name: "Full custom branding",           included: true },
       { name: "Full API access",               included: true },
@@ -121,10 +128,10 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const BENEFITS: Benefit[] = [
-  { icon: Clock,      title: "Save 20+ Hours Weekly",       description: "Automate routine tasks and focus on what matters most - teaching and learning." },
-  { icon: TrendingUp, title: "Improve Student Outcomes",    description: "Data-driven insights help identify and support struggling students early."          },
-  { icon: Heart,      title: "Increase Parent Engagement",  description: "Real-time updates and easy communication strengthen school-home connections."       },
-  { icon: DollarSign, title: "Reduce Administrative Costs", description: "Streamline operations and reduce manual paperwork by up to 70%."                    },
+  { icon: Clock,      title: "Save 20+ Hours Weekly",       description: "Automate attendance, grading, and exam prep, freeing teachers to focus entirely on student growth." },
+  { icon: TrendingUp, title: "Improve Student Outcomes",    description: "Real-time analytics and custom AI assessments help pinpoint and close learning gaps early." },
+  { icon: Heart,      title: "Boost Parent Alignment",      description: "Instant grade push alerts, attendance notices, and automated fee reminders keep parents synced." },
+  { icon: DollarSign, title: "Cut Admin Costs by 70%",      description: "Completely digitize student record archives, registration, and fee collection processes." },
 ];
 
 export const PORTAL_SHOWCASES: PortalShowcase[] = [

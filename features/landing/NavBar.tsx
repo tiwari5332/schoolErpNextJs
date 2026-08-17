@@ -10,10 +10,11 @@ interface NavBarProps {
 }
 
 const NAV_LINKS = [
-  { href: "#features",     label: "Features"      },
-  { href: "#pricing",      label: "Pricing"       },
-  { href: "#testimonials", label: "Testimonials"  },
-  { href: "#contact",      label: "Contact"       },
+  { href: "#ai-builder",   label: "AI Exam Builder" },
+  { href: "#attendance",   label: "Attendance"      },
+  { href: "#fees",         label: "Fee Management"  },
+  { href: "#portals",      label: "User Portals"    },
+  { href: "#pricing",      label: "Pricing"         },
 ] as const;
 
 export function NavBar({ onGetStarted }: NavBarProps) {
@@ -38,6 +39,13 @@ export function NavBar({ onGetStarted }: NavBarProps) {
                 {label}
               </a>
             ))}
+            <button
+              onClick={handleGetStarted}
+              role="menuitem"
+              className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors cursor-pointer bg-transparent border-none p-0 focus:outline-none"
+            >
+              Contact Us
+            </button>
           </div>
           <Button
             onClick={handleGetStarted}

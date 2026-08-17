@@ -102,8 +102,8 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
     
     if (!formValues.email.trim()) {
       newErrors.email = "Work email is required";
-    } else if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(formValues.email)) {
-      newErrors.email = "Please enter a valid Gmail address (e.g., user@gmail.com)";
+    } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formValues.email)) {
+      newErrors.email = "Please enter a valid work or school email address (e.g., you@school.edu)";
     }
 
     if (!formValues.phone.trim() || formValues.phone.trim() === "+91") {

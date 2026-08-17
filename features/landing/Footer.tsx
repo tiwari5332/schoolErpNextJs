@@ -1,167 +1,103 @@
-// features/landing/Footer.tsx — Server Component (no state/interactivity needed)
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-} from "lucide-react";
+"use client";
+
+import { Mail, ShieldCheck, Lock, ArrowRight } from "lucide-react";
 import { EduTrioLogo } from "@/components/EduTrioLogo";
 
-export function Footer() {
+interface FooterProps {
+  onScheduleDemo: () => void;
+}
+
+export function Footer({ onScheduleDemo }: FooterProps) {
   return (
-    <footer id="contact" className="bg-slate-900 text-slate-300 py-16 px-6">
+    <footer id="contact" className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700 text-white py-16 px-6 border-t border-white/10 font-sans text-left">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          {/* Company Info */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          
+          {/* Column 1: Brand & compliance summary */}
           <div className="space-y-4">
             <EduTrioLogo size="md" className="brightness-0 invert" />
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Transforming education through innovative technology solutions for modern schools.
+            <p className="text-sm text-indigo-100 leading-relaxed max-w-sm">
+              Transforming school administration with digital intelligence. Manage classrooms, fees, exams, and parent communications on a single, secure platform.
             </p>
-            <div className="flex gap-3">
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="h-8 w-8 rounded-lg bg-slate-800 hover:bg-indigo-600 flex items-center justify-center transition-colors"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                aria-label="Twitter"
-                className="h-8 w-8 rounded-lg bg-slate-800 hover:bg-indigo-600 flex items-center justify-center transition-colors"
-              >
-                <Twitter className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="h-8 w-8 rounded-lg bg-slate-800 hover:bg-indigo-600 flex items-center justify-center transition-colors"
-              >
-                <Linkedin className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="h-8 w-8 rounded-lg bg-slate-800 hover:bg-indigo-600 flex items-center justify-center transition-colors"
-              >
-                <Instagram className="h-4 w-4" />
-              </a>
+            <div className="flex flex-col gap-2 pt-2 text-indigo-200 font-semibold text-[10px] uppercase tracking-wider">
+              <span className="flex items-center gap-1.5">
+                <ShieldCheck className="h-4 w-4 text-emerald-350 text-emerald-450" />
+                FERPA & COPPA Compliant
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Lock className="h-3.5 w-3.5 text-emerald-350 text-emerald-450" />
+                End-to-End SSL Security
+              </span>
             </div>
           </div>
 
-          {/* Product */}
-          <div>
-            <h4 className="font-medium text-white mb-4">Product</h4>
-            <ul className="space-y-2 text-sm">
+          {/* Column 2: Platform Nav Links */}
+          <div className="space-y-4">
+            <h4 className="font-bold text-white text-sm uppercase tracking-wider">Platform Features</h4>
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2.5 text-sm">
               <li>
-                <a href="#features" className="hover:text-white transition-colors">
-                  Features
+                <a href="#ai-builder" className="text-indigo-100 hover:text-white transition-colors">
+                  AI Exam Builder
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-white transition-colors">
-                  Pricing
+                <a href="#attendance" className="text-indigo-100 hover:text-white transition-colors">
+                  Attendance Tracking
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Integrations
+                <a href="#fees" className="text-indigo-100 hover:text-white transition-colors">
+                  Fee Management
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Mobile Apps
+                <a href="#portals" className="text-indigo-100 hover:text-white transition-colors">
+                  User Portals
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Security
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-medium text-white mb-4">Company</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Press Kit
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Partners
+                <a href="#pricing" className="text-indigo-100 hover:text-white transition-colors">
+                  Pricing Plans
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h4 className="font-medium text-white mb-4">Contact Us</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <Mail className="h-4 w-4 mt-0.5 text-indigo-400" />
-                <a
-                  href="mailto:contact@edutrio.com"
-                  className="hover:text-white transition-colors"
-                >
+          {/* Column 3: Contact & Demo CTA */}
+          <div className="space-y-4">
+            <h4 className="font-bold text-white text-sm uppercase tracking-wider">Contact & Inquiries</h4>
+            <ul className="space-y-3.5 text-sm">
+              <li className="flex items-center gap-2.5">
+                <Mail className="h-4 w-4 text-white flex-shrink-0" />
+                <a href="mailto:contact@edutrio.com" className="text-indigo-100 hover:text-white transition-colors">
                   contact@edutrio.com
                 </a>
               </li>
-              <li className="flex items-start gap-2">
-                <Phone className="h-4 w-4 mt-0.5 text-indigo-400" />
-                <a href="tel:+1234567890" className="hover:text-white transition-colors">
-                  +1 (234) 567-890
-                </a>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 mt-0.5 text-indigo-400 flex-shrink-0" />
-                <span className="hover:text-white transition-colors">
-                  123 Education Street
-                  <br />
-                  San Francisco, CA 94102
-                </span>
+              <li className="pt-2">
+                <button
+                  onClick={onScheduleDemo}
+                  className="inline-flex items-center gap-2 text-white hover:text-indigo-100 font-bold transition-all text-sm cursor-pointer group"
+                >
+                  Schedule Personal Walkthrough
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </button>
               </li>
             </ul>
           </div>
+
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-slate-500">
-            &copy; 2026 EduTrio. All rights reserved.
+        {/* Bottom copyright bar */}
+        <div className="pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+          <p className="text-indigo-200">
+            &copy; {new Date().getFullYear()} EduTrio. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm">
+          <div className="flex gap-6 text-indigo-250 text-indigo-200 font-semibold uppercase tracking-wider text-[10px]">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
             <a href="#" className="hover:text-white transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Cookie Policy
             </a>
           </div>
         </div>
