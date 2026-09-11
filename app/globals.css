@@ -2,7 +2,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-size: 14px;
+  --font-size: 16px;
   --background: #fafbff;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
@@ -141,6 +141,18 @@
 }
 
 @theme inline {
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.3125rem;
+  --text-2xl: 1.5625rem;
+  --text-3xl: 1.9375rem;
+  --text-4xl: 2.3125rem;
+  --text-5xl: 3.0625rem;
+  --text-6xl: 3.8125rem;
+  --text-7xl: 4.5625rem;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

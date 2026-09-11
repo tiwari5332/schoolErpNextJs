@@ -111,7 +111,7 @@ export function QuickContactModal({ isOpen, onClose }: QuickContactModalProps) {
               <DialogTitle className="text-base sm:text-lg font-extrabold text-white tracking-tight">
                 WhatsApp Support & Callback
               </DialogTitle>
-              <p className="text-[11px] sm:text-xs text-indigo-100 mt-0.5 font-medium flex items-center gap-1.5">
+              <p className="text-[12px] sm:text-xs text-indigo-100 mt-0.5 font-medium flex items-center gap-1.5">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                 EduTrio Support (+91 7398647812)
               </p>
@@ -195,7 +195,7 @@ export function QuickContactModal({ isOpen, onClose }: QuickContactModalProps) {
               {/* Informational reassurance */}
               <div className="bg-indigo-50/60 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-900/50 rounded-xl p-3 flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
                 <ShieldCheck className="h-4 w-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
-                <p className="text-[11px] leading-relaxed">
+                <p className="text-[12px] leading-relaxed">
                   Submitting will open direct WhatsApp chat with <strong>EduTrio Support (+91 7398647812)</strong> & dispatch callback request to our team.
                 </p>
               </div>

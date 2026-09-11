@@ -55,7 +55,7 @@ export function PricingSection({ onGetStarted }: PricingSectionProps) {
               >
                 {period}
                 {period === "yearly" && (
-                  <Badge className="ml-1.5 sm:ml-2 bg-emerald-100 text-emerald-700 text-[10px] sm:text-xs">
+                  <Badge className="ml-1.5 sm:ml-2 bg-emerald-100 text-emerald-700 text-[11px] sm:text-xs">
                     Save 17%
                   </Badge>
                 )}

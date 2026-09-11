@@ -186,7 +186,7 @@ export function AttendanceSection({ onGetStarted }: { onGetStarted: () => void }
                     </div>
                     <div>
                       <h5 className="font-extrabold text-sm text-slate-100">AI Assist: Parent Draft Email</h5>
-                      <p className="text-[10px] text-slate-400">Recipient: parent.johnson@email.com</p>
+                      <p className="text-[11px] text-slate-400">Recipient: parent.johnson@email.com</p>
                     </div>
                   </div>
                   <div className="bg-slate-950 p-3 rounded-lg text-2xs text-slate-300 font-mono space-y-2 border border-slate-800 leading-normal">
@@ -242,7 +242,7 @@ export function AttendanceSection({ onGetStarted }: { onGetStarted: () => void }
                       </div>
                       <div className="text-left leading-none">
                         <p className="text-xs font-black text-slate-800">John Anderson</p>
-                        <p className="text-[10px] text-slate-500 mt-0.5">Super Admin</p>
+                        <p className="text-[11px] text-slate-500 mt-0.5">Super Admin</p>
                       </div>
                     </div>
                   </div>
@@ -253,21 +253,21 @@ export function AttendanceSection({ onGetStarted }: { onGetStarted: () => void }
                     {/* Filters & selectors */}
                     <div className="grid grid-cols-3 gap-3 flex-shrink-0">
                       <div className="bg-white border border-slate-200 rounded-xl p-2.5 flex flex-col text-left">
-                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Select Class</span>
+                        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Select Class</span>
                         <div className="flex items-center justify-between text-xs font-semibold text-slate-700 mt-1">
                           <span>Class 10-A</span>
                           <ChevronDown className="h-3.5 w-3.5 text-slate-400" />
                         </div>
                       </div>
                       <div className="bg-white border border-slate-200 rounded-xl p-2.5 flex flex-col text-left">
-                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Date</span>
+                        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Date</span>
                         <div className="flex items-center justify-between text-xs font-semibold text-slate-700 mt-1">
                           <span>17-08-2026</span>
                           <ChevronDown className="h-3.5 w-3.5 text-slate-400" />
                         </div>
                       </div>
                       <div className="bg-white border border-slate-200 rounded-xl p-2.5 flex flex-col text-left relative">
-                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Search Student</span>
+                        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Search Student</span>
                         <input 
                           type="text" 
                           placeholder="Name or roll number..." 
@@ -288,7 +288,7 @@ export function AttendanceSection({ onGetStarted }: { onGetStarted: () => void }
                       ].map(({ label, count, icon: Icon, color }) => (
                         <div key={label} className={cn("border p-2.5 rounded-xl flex items-center justify-between bg-white shadow-3xs", color)}>
                           <div>
-                            <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">{label}</span>
+                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">{label}</span>
                             <span className="text-lg font-black text-slate-900 leading-none mt-1 block">{count}</span>
                           </div>
                           <Icon className="h-4.5 w-4.5" />
@@ -302,15 +302,15 @@ export function AttendanceSection({ onGetStarted }: { onGetStarted: () => void }
                       {/* Left: Mark Attendance list */}
                       <div className="col-span-7 bg-white border border-slate-200 rounded-2xl p-4 flex flex-col justify-between overflow-hidden shadow-2xs">
                         <div className="flex items-center justify-between pb-3 border-b border-slate-100 flex-shrink-0">
-                          <h6 className="font-bold text-slate-800 text-[11px] uppercase tracking-wider">Mark Attendance - Class 10-A</h6>
+                          <h6 className="font-bold text-slate-800 text-[12px] uppercase tracking-wider">Mark Attendance - Class 10-A</h6>
                           <div className="flex gap-2">
-                            <button onClick={handleMarkAllPresent} className="bg-emerald-50 border border-emerald-250 border-emerald-200 text-emerald-700 font-bold text-[10px] px-2.5 py-1 rounded-lg cursor-pointer">Mark All Present</button>
-                            <button onClick={handleReset} className="bg-slate-50 border border-slate-200 text-slate-600 font-bold text-[10px] px-2.5 py-1 rounded-lg cursor-pointer">Reset</button>
+                            <button onClick={handleMarkAllPresent} className="bg-emerald-50 border border-emerald-250 border-emerald-200 text-emerald-700 font-bold text-[11px] px-2.5 py-1 rounded-lg cursor-pointer">Mark All Present</button>
+                            <button onClick={handleReset} className="bg-slate-50 border border-slate-200 text-slate-600 font-bold text-[11px] px-2.5 py-1 rounded-lg cursor-pointer">Reset</button>
                           </div>
                         </div>
 
                         {/* Scrollable Student List area */}
-                        <div className="flex-grow overflow-y-auto space-y-2.5 py-3 pr-1 text-[11px] max-h-[220px]">
+                        <div className="flex-grow overflow-y-auto space-y-2.5 py-3 pr-1 text-[12px] max-h-[220px]">
                           {students.map((student) => (
                             <div 
                               key={student.id} 
@@ -333,7 +333,7 @@ export function AttendanceSection({ onGetStarted }: { onGetStarted: () => void }
                                 </div>
                                 <div className="leading-none">
                                   <p className="font-black text-slate-800">{student.name}</p>
-                                  <p className="text-[9px] text-slate-400 mt-0.5">Roll No: {student.id}</p>
+                                  <p className="text-[10px] text-slate-400 mt-0.5">Roll No: {student.id}</p>
                                 </div>
                               </div>
 
@@ -388,7 +388,7 @@ export function AttendanceSection({ onGetStarted }: { onGetStarted: () => void }
                         {/* Donut Chart / Today's Summary */}
                         <div className="bg-white border border-slate-200 rounded-2xl p-3 flex flex-col justify-between shadow-2xs">
                           <div className="text-left">
-                            <h6 className="font-bold text-slate-800 text-[11px] uppercase tracking-wider">Today&apos;s Summary</h6>
+                            <h6 className="font-bold text-slate-800 text-[12px] uppercase tracking-wider">Today&apos;s Summary</h6>
                           </div>
                           
                           <div className="flex justify-center items-center py-2 relative">
@@ -419,7 +419,7 @@ export function AttendanceSection({ onGetStarted }: { onGetStarted: () => void }
                             </svg>
                           </div>
 
-                          <div className="grid grid-cols-2 gap-x-2 gap-y-1 text-[9px] font-sans font-bold text-slate-500 pt-2 border-t border-slate-100">
+                          <div className="grid grid-cols-2 gap-x-2 gap-y-1 text-[10px] font-sans font-bold text-slate-500 pt-2 border-t border-slate-100">
                             <div className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-emerald-500" /><span>Present: {presentCount}</span></div>
                             <div className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-rose-500" /><span>Absent: {absentCount}</span></div>
                             <div className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-amber-500" /><span>Late: {lateCount}</span></div>
@@ -431,14 +431,14 @@ export function AttendanceSection({ onGetStarted }: { onGetStarted: () => void }
                         <div className="bg-indigo-50/50 border border-indigo-150 border-indigo-100 rounded-2xl p-3 text-left shadow-2xs flex flex-col justify-between flex-grow">
                           <div className="flex items-center gap-1.5 border-b border-indigo-100 pb-1.5 flex-shrink-0">
                             <BrainCircuit className="h-4.5 w-4.5 text-indigo-600 animate-pulse" />
-                            <span className="font-extrabold text-[10px] text-indigo-800 uppercase tracking-wider">AI Attendance Insights</span>
+                            <span className="font-extrabold text-[11px] text-indigo-800 uppercase tracking-wider">AI Attendance Insights</span>
                           </div>
-                          <div className="py-2 text-[10px] text-slate-700 leading-normal space-y-1.5 flex-grow">
+                          <div className="py-2 text-[11px] text-slate-700 leading-normal space-y-1.5 flex-grow">
                             <p>🚨 <strong>Tardiness Alert:</strong> Liam Johnson is late 3x this week. AI predicts an 85% chance of late attendance tomorrow.</p>
                           </div>
                           <button
                             onClick={() => setAiDraftOpen(true)}
-                            className="w-full bg-indigo-600 hover:bg-indigo-75 bg-indigo-600 text-white font-bold text-[9px] py-1.5 rounded-lg flex items-center justify-center gap-1 cursor-pointer transition-colors shadow-2xs flex-shrink-0"
+                            className="w-full bg-indigo-600 hover:bg-indigo-75 bg-indigo-600 text-white font-bold text-[10px] py-1.5 rounded-lg flex items-center justify-center gap-1 cursor-pointer transition-colors shadow-2xs flex-shrink-0"
                           >
                             <MessageSquare className="h-2.5 w-2.5" />
                             Draft Parent Alert Email

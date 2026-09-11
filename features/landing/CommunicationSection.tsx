@@ -450,7 +450,7 @@ export function CommunicationSection() {
                     <div className="space-y-1.5">
                       <div className="flex justify-between items-center">
                         <label className="text-xs font-bold text-slate-700">Message Body *</label>
-                        <span className="text-[10px] text-slate-400 font-semibold">{broadcastBody.length} characters</span>
+                        <span className="text-[11px] text-slate-400 font-semibold">{broadcastBody.length} characters</span>
                       </div>
                       <textarea 
                         rows={3}
@@ -601,15 +601,15 @@ export function CommunicationSection() {
 
                   <div className="grid grid-cols-3 gap-2 text-center text-xs font-sans border-y border-slate-100 py-3">
                     <div className="bg-indigo-50/50 p-2 rounded-lg">
-                      <p className="text-[10px] text-slate-400 uppercase font-bold">Recipients</p>
+                      <p className="text-[11px] text-slate-400 uppercase font-bold">Recipients</p>
                       <p className="font-black text-indigo-600 text-sm">{selectedBroadcastDetails.stats.totalRecipients}</p>
                     </div>
                     <div className="bg-emerald-50/50 p-2 rounded-lg">
-                      <p className="text-[10px] text-slate-400 uppercase font-bold">Delivered</p>
+                      <p className="text-[11px] text-slate-400 uppercase font-bold">Delivered</p>
                       <p className="font-black text-emerald-600 text-sm">{selectedBroadcastDetails.stats.delivered}</p>
                     </div>
                     <div className="bg-purple-50/50 p-2 rounded-lg">
-                      <p className="text-[10px] text-slate-400 uppercase font-bold">Open Rate</p>
+                      <p className="text-[11px] text-slate-400 uppercase font-bold">Open Rate</p>
                       <p className="font-black text-purple-600 text-sm">{selectedBroadcastDetails.stats.opened}</p>
                     </div>
                   </div>
@@ -640,13 +640,13 @@ export function CommunicationSection() {
                       </div>
                       <div>
                         <h4 className="font-black text-slate-800 text-lg tracking-tight leading-none">Dashboard</h4>
-                        <p className="text-[11px] text-slate-400 mt-0.5">Welcome back, manage your institution efficiently with EduTrio</p>
+                        <p className="text-[12px] text-slate-400 mt-0.5">Welcome back, manage your institution efficiently with EduTrio</p>
                       </div>
                     </div>
                     
                     <div className="flex items-center gap-3">
                       <Search className="h-4 w-4 text-slate-400 cursor-pointer hover:text-slate-600" />
-                      <div className="flex items-center gap-1.5 bg-emerald-50/80 border border-emerald-200 text-emerald-700 rounded-lg px-2.5 py-1 text-[11px] font-bold">
+                      <div className="flex items-center gap-1.5 bg-emerald-50/80 border border-emerald-200 text-emerald-700 rounded-lg px-2.5 py-1 text-[12px] font-bold">
                         <Calendar className="h-3 w-3" />
                         <span>Academic Year 2024-25</span>
                         <ChevronDown className="h-3 w-3" />
@@ -657,7 +657,7 @@ export function CommunicationSection() {
                       <div className="flex items-center gap-2 border-l border-slate-200 pl-3">
                         <div className="text-right leading-none">
                           <p className="text-xs font-bold text-slate-800">Aohn Anderson</p>
-                          <p className="text-[9px] text-slate-400 mt-0.5">Super Admin</p>
+                          <p className="text-[10px] text-slate-400 mt-0.5">Super Admin</p>
                         </div>
                         <div className="h-8 w-8 rounded-full bg-indigo-600 text-white font-black text-xs flex items-center justify-center shadow-xs">
                           AA
@@ -706,7 +706,7 @@ export function CommunicationSection() {
                           <Megaphone className="h-5 w-5" />
                         </div>
                         <div>
-                          <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Total Broadcasts</p>
+                          <p className="text-[11px] text-slate-400 font-bold uppercase tracking-wider">Total Broadcasts</p>
                           <h4 className="text-2xl font-black text-slate-900 leading-tight">{broadcasts.length}</h4>
                         </div>
                       </div>
@@ -717,7 +717,7 @@ export function CommunicationSection() {
                           <Calendar className="h-5 w-5" />
                         </div>
                         <div>
-                          <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Upcoming Events</p>
+                          <p className="text-[11px] text-slate-400 font-bold uppercase tracking-wider">Upcoming Events</p>
                           <h4 className="text-2xl font-black text-slate-900 leading-tight">{events.length}</h4>
                         </div>
                       </div>
@@ -728,7 +728,7 @@ export function CommunicationSection() {
                           <Bell className="h-5 w-5" />
                         </div>
                         <div>
-                          <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Active Alerts</p>
+                          <p className="text-[11px] text-slate-400 font-bold uppercase tracking-wider">Active Alerts</p>
                           <h4 className="text-2xl font-black text-slate-900 leading-tight">0</h4>
                         </div>
                       </div>
@@ -749,16 +749,16 @@ export function CommunicationSection() {
                             <div key={bc.id} className="border border-slate-200/80 rounded-xl p-3.5 hover:bg-slate-50/50 transition-colors space-y-2">
                               <div className="flex justify-between items-start">
                                 <h6 className="font-bold text-slate-900 text-xs">{bc.title}</h6>
-                                <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 text-[9px] font-bold px-2 py-0.5 rounded-full">
+                                <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold px-2 py-0.5 rounded-full">
                                   ✓ {bc.status}
                                 </span>
                               </div>
                               
-                              <p className="text-[11px] text-slate-500 leading-relaxed line-clamp-2">
+                              <p className="text-[12px] text-slate-500 leading-relaxed line-clamp-2">
                                 {bc.body}
                               </p>
 
-                              <div className="flex flex-wrap items-center justify-between text-[10px] text-slate-400 font-semibold pt-1 border-t border-slate-100">
+                              <div className="flex flex-wrap items-center justify-between text-[11px] text-slate-400 font-semibold pt-1 border-t border-slate-100">
                                 <div className="flex items-center gap-3">
                                   <span>👥 Target: <strong className="text-slate-700">{bc.target}</strong></span>
                                   <span>Channels: <strong className="text-slate-700">{bc.channels.join(", ")}</strong></span>
@@ -785,7 +785,7 @@ export function CommunicationSection() {
                             <div key={ev.id} className="border border-slate-200/80 rounded-xl p-3 flex gap-3 items-center hover:bg-slate-50/50 transition-colors">
                               {/* Date Box */}
                               <div className="bg-sky-50 text-sky-700 border border-sky-100 rounded-xl p-2 text-center flex-shrink-0 min-w-[50px]">
-                                <p className="text-[9px] font-extrabold uppercase tracking-wider">{ev.month}</p>
+                                <p className="text-[10px] font-extrabold uppercase tracking-wider">{ev.month}</p>
                                 <p className="text-lg font-black leading-none mt-0.5">{ev.day}</p>
                               </div>
 
@@ -793,12 +793,12 @@ export function CommunicationSection() {
                               <div className="flex-grow space-y-1">
                                 <div className="flex justify-between items-start">
                                   <h6 className="font-bold text-slate-900 text-xs leading-tight">{ev.title}</h6>
-                                  <span className="text-[9px] bg-slate-100 text-slate-600 font-bold px-1.5 py-0.5 rounded border border-slate-200">
+                                  <span className="text-[10px] bg-slate-100 text-slate-600 font-bold px-1.5 py-0.5 rounded border border-slate-200">
                                     {ev.category}
                                   </span>
                                 </div>
 
-                                <div className="flex items-center gap-3 text-[10px] text-slate-400 font-semibold">
+                                <div className="flex items-center gap-3 text-[11px] text-slate-400 font-semibold">
                                   <span className="flex items-center gap-1">
                                     <Clock className="h-3 w-3" />
                                     {ev.time}
@@ -810,14 +810,14 @@ export function CommunicationSection() {
                                 </div>
 
                                 {ev.location && (
-                                  <span className="inline-flex items-center gap-1 text-[9px] text-slate-600 bg-slate-50 px-2 py-0.5 rounded-full border border-slate-200 font-medium">
+                                  <span className="inline-flex items-center gap-1 text-[10px] text-slate-600 bg-slate-50 px-2 py-0.5 rounded-full border border-slate-200 font-medium">
                                     <MapPin className="h-2.5 w-2.5 text-indigo-500" />
                                     {ev.location}
                                   </span>
                                 )}
 
                                 {ev.link && (
-                                  <a href={ev.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[9px] text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-100 font-semibold hover:underline">
+                                  <a href={ev.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-[10px] text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-100 font-semibold hover:underline">
                                     <Video className="h-2.5 w-2.5 text-indigo-600" />
                                     {ev.link}
                                   </a>
@@ -836,7 +836,7 @@ export function CommunicationSection() {
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
                         <div>
                           <h5 className="font-bold text-slate-900 text-sm">All Broadcasts ({filteredBroadcasts.length})</h5>
-                          <p className="text-[10px] text-slate-400">Complete list of sent announcements and communications</p>
+                          <p className="text-[11px] text-slate-400">Complete list of sent announcements and communications</p>
                         </div>
 
                         {/* Search & Filters */}
@@ -848,14 +848,14 @@ export function CommunicationSection() {
                               value={searchQuery}
                               onChange={(e) => setSearchQuery(e.target.value)}
                               placeholder="Search broadcasts..."
-                              className="pl-7 pr-3 py-1 rounded-lg border border-slate-200 text-[10px] bg-slate-50 w-36 focus:outline-none focus:bg-white"
+                              className="pl-7 pr-3 py-1 rounded-lg border border-slate-200 text-[11px] bg-slate-50 w-36 focus:outline-none focus:bg-white"
                             />
                           </div>
 
                           <select 
                             value={selectedAudienceFilter}
                             onChange={(e) => setSelectedAudienceFilter(e.target.value)}
-                            className="text-[10px] border border-slate-200 rounded-lg p-1 bg-slate-50 text-slate-600 font-semibold cursor-pointer"
+                            className="text-[11px] border border-slate-200 rounded-lg p-1 bg-slate-50 text-slate-600 font-semibold cursor-pointer"
                           >
                             <option value="All Audiences">All Audiences</option>
                             <option value="All">All</option>
@@ -867,7 +867,7 @@ export function CommunicationSection() {
                           <select 
                             value={selectedChannelFilter}
                             onChange={(e) => setSelectedChannelFilter(e.target.value)}
-                            className="text-[10px] border border-slate-200 rounded-lg p-1 bg-slate-50 text-slate-600 font-semibold cursor-pointer"
+                            className="text-[11px] border border-slate-200 rounded-lg p-1 bg-slate-50 text-slate-600 font-semibold cursor-pointer"
                           >
                             <option value="All Channels">All Channels</option>
                             <option value="Email">Email</option>
@@ -879,9 +879,9 @@ export function CommunicationSection() {
 
                       {/* Table */}
                       <div className="overflow-x-auto">
-                        <table className="w-full text-left text-[11px]">
+                        <table className="w-full text-left text-[12px]">
                           <thead>
-                            <tr className="text-[10px] font-bold text-slate-400 uppercase border-b border-slate-100">
+                            <tr className="text-[11px] font-bold text-slate-400 uppercase border-b border-slate-100">
                               <th className="py-2 px-3">Title</th>
                               <th className="py-2 px-3">Target</th>
                               <th className="py-2 px-3">Date</th>
@@ -893,7 +893,7 @@ export function CommunicationSection() {
                               <tr key={bc.id} className="hover:bg-slate-50/60 transition-colors">
                                 <td className="py-2.5 px-3 font-bold text-slate-800">
                                   {bc.title}
-                                  <span className="ml-2 text-[9px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">
+                                  <span className="ml-2 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">
                                     {bc.status}
                                   </span>
                                 </td>

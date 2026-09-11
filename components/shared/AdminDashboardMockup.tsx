@@ -44,7 +44,7 @@ export function AdminDashboardMockup() {
 
           <div className="relative h-9 w-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-600">
             <Bell className="h-4.5 w-4.5" />
-            <span className="absolute -top-1 -right-1 h-4 w-4 bg-rose-500 text-white text-[10px] font-black rounded-full flex items-center justify-center">3</span>
+            <span className="absolute -top-1 -right-1 h-4 w-4 bg-rose-500 text-white text-[11px] font-black rounded-full flex items-center justify-center">3</span>
           </div>
 
           <div className="flex items-center gap-2 border-l border-slate-200 pl-3">
@@ -53,7 +53,7 @@ export function AdminDashboardMockup() {
             </div>
             <div className="text-left leading-none">
               <p className="text-xs font-black text-slate-800">John Anderson</p>
-              <p className="text-[10px] text-slate-500 mt-0.5">Super Admin</p>
+              <p className="text-[11px] text-slate-500 mt-0.5">Super Admin</p>
             </div>
           </div>
         </div>

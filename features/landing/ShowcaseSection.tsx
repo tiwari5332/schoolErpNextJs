@@ -59,7 +59,7 @@ function TeacherPortalMockup() {
   return (
     <div className="w-full h-full bg-[#F8FAFC] flex flex-col font-sans text-left select-none relative overflow-hidden">
       {toast && (
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 z-30 bg-slate-900 text-white text-[10px] font-bold px-3 py-1.5 rounded-lg shadow-lg flex items-center gap-1.5 animate-fade-in">
+        <div className="absolute top-2 left-1/2 -translate-x-1/2 z-30 bg-slate-900 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-lg flex items-center gap-1.5 animate-fade-in">
           <Sparkles className="h-3 w-3 text-emerald-400" />
           <span>{toast}</span>
         </div>
@@ -73,19 +73,19 @@ function TeacherPortalMockup() {
           </div>
           <div>
             <h5 className="font-bold text-slate-800 text-xs leading-none">Teacher Hub</h5>
-            <p className="text-[9px] text-slate-400 mt-0.5">Gradebook & Lesson Management</p>
+            <p className="text-[10px] text-slate-400 mt-0.5">Gradebook & Lesson Management</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <select 
             value={selectedClass} 
             onChange={(e) => setSelectedClass(e.target.value)}
-            className="text-[10px] bg-purple-50 border border-purple-100 text-purple-700 font-bold rounded-lg px-2 py-1 cursor-pointer"
+            className="text-[11px] bg-purple-50 border border-purple-100 text-purple-700 font-bold rounded-lg px-2 py-1 cursor-pointer"
           >
             <option value="Class 10-A">Class 10-A (Math)</option>
             <option value="Class 9-B">Class 9-B (Physics)</option>
           </select>
-          <div className="h-7 w-7 rounded-full bg-purple-100 text-purple-700 font-bold text-[10px] flex items-center justify-center">
+          <div className="h-7 w-7 rounded-full bg-purple-100 text-purple-700 font-bold text-[11px] flex items-center justify-center">
             MR
           </div>
         </div>
@@ -97,15 +97,15 @@ function TeacherPortalMockup() {
         {/* Quick Stats */}
         <div className="grid grid-cols-3 gap-2 flex-shrink-0">
           <div className="bg-white border border-slate-200 p-2.5 rounded-xl text-left">
-            <span className="text-[8px] font-bold text-slate-400 uppercase">Avg Class Score</span>
+            <span className="text-[9px] font-bold text-slate-400 uppercase">Avg Class Score</span>
             <p className="text-base font-black text-slate-900 mt-0.5">91.2%</p>
           </div>
           <div className="bg-white border border-slate-200 p-2.5 rounded-xl text-left">
-            <span className="text-[8px] font-bold text-slate-400 uppercase">Submissions</span>
+            <span className="text-[9px] font-bold text-slate-400 uppercase">Submissions</span>
             <p className="text-base font-black text-emerald-600 mt-0.5">28/30</p>
           </div>
           <div className="bg-white border border-slate-200 p-2.5 rounded-xl text-left">
-            <span className="text-[8px] font-bold text-slate-400 uppercase">Pending Review</span>
+            <span className="text-[9px] font-bold text-slate-400 uppercase">Pending Review</span>
             <p className="text-base font-black text-amber-600 mt-0.5">2</p>
           </div>
         </div>
@@ -113,14 +113,14 @@ function TeacherPortalMockup() {
         {/* Gradebook Table Card */}
         <div className="bg-white border border-slate-200 rounded-xl p-3 flex-grow flex flex-col justify-between shadow-2xs">
           <div className="flex justify-between items-center pb-2 border-b border-slate-100">
-            <h6 className="font-bold text-[10px] uppercase text-slate-700">Live Gradebook ({selectedClass})</h6>
-            <span className="text-[9px] bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full">Auto Syncing</span>
+            <h6 className="font-bold text-[11px] uppercase text-slate-700">Live Gradebook ({selectedClass})</h6>
+            <span className="text-[10px] bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full">Auto Syncing</span>
           </div>
 
-          <div className="overflow-x-auto text-[10px] flex-grow pt-1">
+          <div className="overflow-x-auto text-[11px] flex-grow pt-1">
             <table className="w-full text-left">
               <thead>
-                <tr className="text-slate-400 font-bold border-b border-slate-100 text-[9px] uppercase">
+                <tr className="text-slate-400 font-bold border-b border-slate-100 text-[10px] uppercase">
                   <th className="py-1 px-1">Student</th>
                   <th className="py-1 px-1">Quiz 1</th>
                   <th className="py-1 px-1">Quiz 2</th>
@@ -135,14 +135,14 @@ function TeacherPortalMockup() {
                     <td className="py-1.5 px-1 text-slate-600">{g.quiz1}%</td>
                     <td className="py-1.5 px-1 text-slate-600">{g.quiz2}%</td>
                     <td className="py-1.5 px-1">
-                      <span className="bg-purple-50 text-purple-700 font-extrabold px-1.5 py-0.5 rounded text-[9px]">
+                      <span className="bg-purple-50 text-purple-700 font-extrabold px-1.5 py-0.5 rounded text-[10px]">
                         {g.assignment}
                       </span>
                     </td>
                     <td className="py-1.5 px-1 text-right">
                       <button 
                         onClick={() => handleQuickGrade(g.id)}
-                        className="text-[9px] bg-purple-600 hover:bg-purple-700 text-white font-bold px-2 py-0.5 rounded cursor-pointer transition-colors"
+                        className="text-[10px] bg-purple-600 hover:bg-purple-700 text-white font-bold px-2 py-0.5 rounded cursor-pointer transition-colors"
                       >
                         + Grade
                       </button>
@@ -183,15 +183,15 @@ function StudentPortalMockup() {
           </div>
           <div>
             <h5 className="font-extrabold text-xs leading-none">Student Workspace</h5>
-            <p className="text-[9px] text-cyan-100 mt-0.5">Alex Vance · Grade 10-A</p>
+            <p className="text-[10px] text-cyan-100 mt-0.5">Alex Vance · Grade 10-A</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <div className="bg-white/15 backdrop-blur-xs px-2 py-1 rounded-lg text-[9px] font-bold flex items-center gap-1">
+          <div className="bg-white/15 backdrop-blur-xs px-2 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1">
             <Flame className="h-3 w-3 text-amber-300 fill-amber-300 animate-pulse" />
             <span>{streak} Days</span>
           </div>
-          <div className="bg-amber-400 text-slate-900 px-2.5 py-1 rounded-lg text-[9px] font-black flex items-center gap-1 shadow-sm">
+          <div className="bg-amber-400 text-slate-900 px-2.5 py-1 rounded-lg text-[10px] font-black flex items-center gap-1 shadow-sm">
             <Star className="h-3 w-3 fill-slate-900" />
             <span>{xp} XP</span>
           </div>
@@ -204,15 +204,15 @@ function StudentPortalMockup() {
         {/* Daily Goal Banner */}
         <div className="bg-white border border-slate-200 p-3 rounded-xl flex items-center justify-between shadow-2xs">
           <div className="space-y-0.5">
-            <span className="text-[8px] font-extrabold text-cyan-600 uppercase tracking-wider">Today&apos;s Quest</span>
+            <span className="text-[9px] font-extrabold text-cyan-600 uppercase tracking-wider">Today&apos;s Quest</span>
             <p className="text-xs font-bold text-slate-800">Complete Quadratic Equations Quiz</p>
-            <p className="text-[9px] text-slate-400">+100 XP upon completion</p>
+            <p className="text-[10px] text-slate-400">+100 XP upon completion</p>
           </div>
           <Button 
             onClick={handleCompleteGoal}
             disabled={completedTask}
             className={cn(
-              "text-[10px] font-bold py-1 px-3 rounded-lg shadow-xs cursor-pointer transition-all",
+              "text-[11px] font-bold py-1 px-3 rounded-lg shadow-xs cursor-pointer transition-all",
               completedTask ? "bg-emerald-500 text-white" : "bg-cyan-600 hover:bg-cyan-700 text-white"
             )}
           >
@@ -226,7 +226,7 @@ function StudentPortalMockup() {
           <div className="bg-white border border-slate-200 p-3 rounded-xl flex flex-col justify-between shadow-2xs">
             <div className="flex justify-between items-start">
               <span className="text-lg">📐</span>
-              <span className="text-[9px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">94% A</span>
+              <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">94% A</span>
             </div>
             <div>
               <p className="font-bold text-slate-800 text-xs">Mathematics</p>
@@ -240,7 +240,7 @@ function StudentPortalMockup() {
           <div className="bg-white border border-slate-200 p-3 rounded-xl flex flex-col justify-between shadow-2xs">
             <div className="flex justify-between items-start">
               <span className="text-lg">🧪</span>
-              <span className="text-[9px] font-bold text-cyan-600 bg-cyan-50 px-1.5 py-0.5 rounded">88% B+</span>
+              <span className="text-[10px] font-bold text-cyan-600 bg-cyan-50 px-1.5 py-0.5 rounded">88% B+</span>
             </div>
             <div>
               <p className="font-bold text-slate-800 text-xs">Physical Science</p>
@@ -257,8 +257,8 @@ function StudentPortalMockup() {
             <Brain className="h-3.5 w-3.5" />
           </div>
           <div>
-            <p className="text-[10px] font-bold text-cyan-900">AI Tutor Helper Active</p>
-            <p className="text-[9px] text-cyan-700 leading-tight">Ask AI for practice question hints or formula cheat-sheets!</p>
+            <p className="text-[11px] font-bold text-cyan-900">AI Tutor Helper Active</p>
+            <p className="text-[10px] text-cyan-700 leading-tight">Ask AI for practice question hints or formula cheat-sheets!</p>
           </div>
         </div>
 
@@ -282,10 +282,10 @@ function ParentPortalMockup() {
           </div>
           <div>
             <h5 className="font-extrabold text-slate-800 text-xs leading-none">Parent Portal</h5>
-            <p className="text-[9px] text-slate-400 mt-0.5">Monitoring {child}</p>
+            <p className="text-[10px] text-slate-400 mt-0.5">Monitoring {child}</p>
           </div>
         </div>
-        <div className="flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 px-2 py-1 rounded-lg text-[9px] font-bold">
+        <div className="flex items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 px-2 py-1 rounded-lg text-[10px] font-bold">
           <CheckCircle2 className="h-3 w-3 text-emerald-600" />
           <span>Present Today</span>
         </div>
@@ -297,24 +297,24 @@ function ParentPortalMockup() {
         {/* Child Academic Summary Card */}
         <div className="bg-white border border-slate-200 p-3 rounded-xl space-y-2 shadow-2xs">
           <div className="flex justify-between items-center">
-            <span className="text-[9px] font-extrabold text-slate-400 uppercase">Recent Assessment</span>
-            <span className="text-[9px] font-bold bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded">Grade A (95/100)</span>
+            <span className="text-[10px] font-extrabold text-slate-400 uppercase">Recent Assessment</span>
+            <span className="text-[10px] font-bold bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded">Grade A (95/100)</span>
           </div>
           <p className="font-bold text-slate-800 text-xs">Class 8 Algebra Term Examination</p>
-          <p className="text-[9px] text-slate-500">Teacher Note: Excellent conceptual clarity and step-by-step problem solving!</p>
+          <p className="text-[10px] text-slate-500">Teacher Note: Excellent conceptual clarity and step-by-step problem solving!</p>
         </div>
 
         {/* Fee & Attendance Dual Cards */}
         <div className="grid grid-cols-2 gap-2">
           <div className="bg-white border border-slate-200 p-2.5 rounded-xl text-left">
-            <span className="text-[8px] font-bold text-slate-400 uppercase">Fee Status</span>
+            <span className="text-[9px] font-bold text-slate-400 uppercase">Fee Status</span>
             <p className="text-xs font-black text-emerald-600 mt-0.5">₹0 Dues (Paid)</p>
-            <button className="text-[8px] text-indigo-600 font-bold underline mt-1 block">Download Receipt</button>
+            <button className="text-[9px] text-indigo-600 font-bold underline mt-1 block">Download Receipt</button>
           </div>
           <div className="bg-white border border-slate-200 p-2.5 rounded-xl text-left">
-            <span className="text-[8px] font-bold text-slate-400 uppercase">Overall Attendance</span>
+            <span className="text-[9px] font-bold text-slate-400 uppercase">Overall Attendance</span>
             <p className="text-xs font-black text-slate-800 mt-0.5">98.5% Rate</p>
-            <span className="text-[8px] text-slate-400 mt-1 block">1 Absense (Excused)</span>
+            <span className="text-[9px] text-slate-400 mt-1 block">1 Absense (Excused)</span>
           </div>
         </div>
 
@@ -323,13 +323,13 @@ function ParentPortalMockup() {
           <div className="flex items-center gap-2">
             <MessageSquare className="h-4 w-4 text-emerald-600" />
             <div>
-              <p className="text-[10px] font-bold text-slate-800">Message Class Teacher</p>
-              <p className="text-[9px] text-slate-500">Mrs. Sarah Jenkins (Class 8-A)</p>
+              <p className="text-[11px] font-bold text-slate-800">Message Class Teacher</p>
+              <p className="text-[10px] text-slate-500">Mrs. Sarah Jenkins (Class 8-A)</p>
             </div>
           </div>
           <button 
             onClick={() => setSentMsg(!sentMsg)}
-            className="text-[9px] font-bold bg-emerald-600 text-white px-2.5 py-1 rounded-lg hover:bg-emerald-700 cursor-pointer transition-colors"
+            className="text-[10px] font-bold bg-emerald-600 text-white px-2.5 py-1 rounded-lg hover:bg-emerald-700 cursor-pointer transition-colors"
           >
             {sentMsg ? "✓ Sent!" : "Send Note"}
           </button>
@@ -515,7 +515,7 @@ export function ShowcaseSection({ onGetStarted }: ShowcaseSectionProps) {
                   <GraduationCap className="h-3.5 w-3.5 mr-1" />
                   Student Workspace
                 </Badge>
-                <Badge className="bg-amber-100 text-amber-800 border border-amber-200 px-2 py-0.5 font-bold text-[10px]">
+                <Badge className="bg-amber-100 text-amber-800 border border-amber-200 px-2 py-0.5 font-bold text-[11px]">
                   Gamified
                 </Badge>
               </div>

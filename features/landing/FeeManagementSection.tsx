@@ -276,7 +276,7 @@ export function FeeManagementSection() {
                     <div>
                       <div className="flex items-center gap-1.5">
                         <h4 className="font-black text-slate-800 text-xl tracking-tight leading-none">Dashboard</h4>
-                        <span className="text-[10px] bg-slate-50 border border-slate-200 rounded px-1 text-slate-400 leading-none py-0.5">Fees Admin</span>
+                        <span className="text-[11px] bg-slate-50 border border-slate-200 rounded px-1 text-slate-400 leading-none py-0.5">Fees Admin</span>
                       </div>
                       <p className="text-xs text-slate-500 mt-1">Manage student fee payments and track dues</p>
                     </div>
@@ -287,7 +287,7 @@ export function FeeManagementSection() {
                       </div>
                       <div className="text-left leading-none">
                         <p className="text-xs font-black text-slate-800">John Anderson</p>
-                        <p className="text-[10px] text-slate-500 mt-0.5">Super Admin</p>
+                        <p className="text-[11px] text-slate-500 mt-0.5">Super Admin</p>
                       </div>
                     </div>
                   </div>
@@ -355,12 +355,12 @@ export function FeeManagementSection() {
                             type="text" 
                             placeholder="Search by name or ID..." 
                             disabled 
-                            className="pl-8 pr-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-[10px] w-full focus:outline-none"
+                            className="pl-8 pr-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-[11px] w-full focus:outline-none"
                           />
                         </div>
 
                         {/* Dropdowns */}
-                        <div className="flex gap-2 text-[10px] text-slate-500 font-semibold">
+                        <div className="flex gap-2 text-[11px] text-slate-500 font-semibold">
                           <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1">
                             <span>All Statuses</span>
                             <ChevronDown className="h-2.5 w-2.5" />
@@ -376,7 +376,7 @@ export function FeeManagementSection() {
                       <div className="flex items-center gap-2">
                         
                         {/* Tab toggle */}
-                        <div className="flex border border-slate-200 rounded-lg p-0.5 bg-slate-50 text-[10px] font-bold">
+                        <div className="flex border border-slate-200 rounded-lg p-0.5 bg-slate-50 text-[11px] font-bold">
                           <button
                             onClick={() => setFilterType("All")}
                             className={cn(
@@ -394,7 +394,7 @@ export function FeeManagementSection() {
                             )}
                           >
                             Outstanding Dues (3)
-                            <span className="bg-amber-100 text-amber-800 text-[8px] px-1 rounded-full font-black">3</span>
+                            <span className="bg-amber-100 text-amber-800 text-[9px] px-1 rounded-full font-black">3</span>
                           </button>
                         </div>
 
@@ -404,7 +404,7 @@ export function FeeManagementSection() {
                             onClick={handleSendBulkReminders}
                             disabled={bulkAlertSent}
                             className={cn(
-                              "text-[10px] font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 transition-all cursor-pointer",
+                              "text-[11px] font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 transition-all cursor-pointer",
                               bulkAlertSent 
                                 ? "bg-slate-100 text-slate-400 border border-slate-200" 
                                 : "bg-indigo-600 text-white hover:bg-indigo-700 shadow-sm"
@@ -424,16 +424,16 @@ export function FeeManagementSection() {
                       
                       <div className="px-5 py-3 border-b border-slate-100 flex items-center justify-between flex-shrink-0">
                         <div>
-                          <h6 className="font-bold text-slate-800 text-[11px] uppercase tracking-wider">Fee Records ({displayedRecords.length})</h6>
-                          <p className="text-[10px] text-slate-400 mt-0.5">Overview of student fee payments and dues</p>
+                          <h6 className="font-bold text-slate-800 text-[12px] uppercase tracking-wider">Fee Records ({displayedRecords.length})</h6>
+                          <p className="text-[11px] text-slate-400 mt-0.5">Overview of student fee payments and dues</p>
                         </div>
                       </div>
 
                       {/* Table grid area */}
-                      <div className="flex-grow overflow-hidden text-[11px]">
+                      <div className="flex-grow overflow-hidden text-[12px]">
                         <table className="w-full text-left border-collapse">
                           <thead>
-                            <tr className="bg-slate-50 text-[10px] font-bold text-slate-500 uppercase border-b border-slate-100">
+                            <tr className="bg-slate-50 text-[11px] font-bold text-slate-500 uppercase border-b border-slate-100">
                               <th className="py-2.5 px-4">Student Info</th>
                               <th className="py-2.5 px-3">Class</th>
                               <th className="py-2.5 px-3">Total Amount</th>
@@ -452,18 +452,18 @@ export function FeeManagementSection() {
                                 {/* Info cell */}
                                 <td className="py-3 px-4 flex items-center gap-2.5">
                                   <input type="checkbox" disabled className="rounded border-slate-300" />
-                                  <div className={cn("h-6.5 w-6.5 rounded-full text-white font-extrabold flex items-center justify-center text-[9px] shadow-3xs", record.avatarColor)}>
+                                  <div className={cn("h-6.5 w-6.5 rounded-full text-white font-extrabold flex items-center justify-center text-[10px] shadow-3xs", record.avatarColor)}>
                                     {record.name.split(" ").map(n => n[0]).join("")}
                                   </div>
                                   <div className="leading-none text-left">
-                                    <p className="font-black text-slate-800 text-[11px]">{record.name}</p>
-                                    <p className="text-[9px] text-slate-400 mt-0.5">{record.id}</p>
+                                    <p className="font-black text-slate-800 text-[12px]">{record.name}</p>
+                                    <p className="text-[10px] text-slate-400 mt-0.5">{record.id}</p>
                                   </div>
                                 </td>
 
                                 {/* Class */}
                                 <td className="py-3 px-3">
-                                  <span className="bg-slate-100 border border-slate-200 text-slate-650 px-1.5 py-0.5 rounded-md text-[9px] font-bold">
+                                  <span className="bg-slate-100 border border-slate-200 text-slate-650 px-1.5 py-0.5 rounded-md text-[10px] font-bold">
                                     {record.class}
                                   </span>
                                 </td>
@@ -472,7 +472,7 @@ export function FeeManagementSection() {
                                 <td className="py-3 px-3">
                                   <p className="font-black text-slate-800">₹{record.total}</p>
                                   {record.discount && (
-                                    <p className="text-[9px] text-emerald-600 font-semibold mt-0.5">-₹{record.discount} discount</p>
+                                    <p className="text-[10px] text-emerald-600 font-semibold mt-0.5">-₹{record.discount} discount</p>
                                   )}
                                 </td>
 
@@ -504,7 +504,7 @@ export function FeeManagementSection() {
                                 {/* Status */}
                                 <td className="py-3 px-3">
                                   <span className={cn(
-                                    "text-[9px] font-black px-2 py-0.5 rounded-full border",
+                                    "text-[10px] font-black px-2 py-0.5 rounded-full border",
                                     record.status === "Paid" 
                                       ? "bg-emerald-50 border-emerald-100 text-emerald-700" 
                                       : record.status === "Pending"
@@ -567,7 +567,7 @@ export function FeeManagementSection() {
                       </div>
 
                       {/* Footer Pagination simulation */}
-                      <div className="px-5 py-3 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400 flex-shrink-0">
+                      <div className="px-5 py-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 flex-shrink-0">
                         <span>Showing {displayedRecords.length} of {displayedRecords.length} records</span>
                         <div className="flex gap-1.5">
                           <button disabled className="px-2 py-0.5 rounded border border-slate-200 bg-slate-50 text-slate-300 cursor-not-allowed">Prev</button>

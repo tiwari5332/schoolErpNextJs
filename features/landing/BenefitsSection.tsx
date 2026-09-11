@@ -186,7 +186,7 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
             >
               <Calculator className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               <span>ROI Calculator</span>
-              <span className="text-[9px] sm:text-[10px] bg-indigo-100 text-indigo-700 px-1.5 sm:px-2 py-0.5 rounded-full font-bold hidden xs:inline-block">
+              <span className="text-[10px] sm:text-[11px] bg-indigo-100 text-indigo-700 px-1.5 sm:px-2 py-0.5 rounded-full font-bold hidden xs:inline-block">
                 Interactive
               </span>
             </button>
@@ -228,7 +228,7 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
                       <div className={`h-10 w-10 sm:h-12 sm:w-12 rounded-xl sm:rounded-2xl bg-gradient-to-r ${pillar.bgGradient} flex items-center justify-center shadow-md text-white group-hover:scale-110 transition-transform`}>
                         <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                       </div>
-                      <span className="text-[10px] sm:text-[11px] font-extrabold tracking-wide uppercase px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                      <span className="text-[11px] sm:text-[12px] font-extrabold tracking-wide uppercase px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
                         {pillar.badge}
                       </span>
                     </div>
@@ -238,7 +238,7 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
                       <div className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 dark:text-white">
                         {pillar.metric}
                       </div>
-                      <div className="text-[11px] sm:text-xs font-semibold text-indigo-600 dark:text-indigo-400">
+                      <div className="text-[12px] sm:text-xs font-semibold text-indigo-600 dark:text-indigo-400">
                         {pillar.statLabel}
                       </div>
                     </div>
@@ -252,7 +252,7 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
 
                     {/* Progress Bar Meter */}
                     <div className="space-y-1.5 pt-2 border-t border-indigo-50 dark:border-indigo-950">
-                      <div className="flex justify-between text-[10px] sm:text-[11px] font-semibold text-slate-500 dark:text-slate-400">
+                      <div className="flex justify-between text-[11px] sm:text-[12px] font-semibold text-slate-500 dark:text-slate-400">
                         <span>Efficiency Gain</span>
                         <span className="text-indigo-600 dark:text-indigo-400 font-bold">{pillar.gainPercent}%</span>
                       </div>
@@ -274,7 +274,7 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
                 <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 sm:gap-6">
                   <div className="space-y-2 max-w-2xl">
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:py-1 rounded-full bg-white/15 text-white text-[10px] sm:text-xs font-bold border border-white/20">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:py-1 rounded-full bg-white/15 text-white text-[11px] sm:text-xs font-bold border border-white/20">
                       <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                       <span>Key Pillar Details: {IMPACT_PILLARS.find(p => p.id === activePillar)?.title}</span>
                     </div>
@@ -344,7 +344,7 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
                 className="w-full h-2.5 sm:h-3 bg-indigo-200 dark:bg-indigo-950 rounded-lg appearance-none cursor-pointer accent-indigo-600"
               />
 
-              <div className="flex justify-between text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-semibold">
+              <div className="flex justify-between text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-semibold">
                 <span>100 (Small)</span>
                 <span>1,500 (Medium)</span>
                 <span>3,000+ (Large)</span>
@@ -358,9 +358,9 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
                 <div className="absolute top-0 right-0 p-3 opacity-10">
                   <Clock className="h-16 w-16 sm:h-20 sm:w-20" />
                 </div>
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold opacity-90">Teacher Time Saved</span>
+                <span className="text-[11px] sm:text-xs uppercase tracking-wider font-bold opacity-90">Teacher Time Saved</span>
                 <div className="text-2xl sm:text-3xl font-black">{calculatedMetrics.hoursSavedPerYear.toLocaleString()} hrs</div>
-                <p className="text-[10px] sm:text-[11px] opacity-90 leading-relaxed">
+                <p className="text-[11px] sm:text-[12px] opacity-90 leading-relaxed">
                   Saved per year in attendance, paper setting, and manual grading tasks.
                 </p>
               </div>
@@ -370,9 +370,9 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
                 <div className="absolute top-0 right-0 p-3 opacity-10">
                   <DollarSign className="h-16 w-16 sm:h-20 sm:w-20" />
                 </div>
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold opacity-90">Fee Recovery Boost</span>
+                <span className="text-[11px] sm:text-xs uppercase tracking-wider font-bold opacity-90">Fee Recovery Boost</span>
                 <div className="text-2xl sm:text-3xl font-black">₹{(calculatedMetrics.feeRecoveryEstimateINR / 100000).toFixed(2)} Lakhs</div>
-                <p className="text-[10px] sm:text-[11px] opacity-90 leading-relaxed">
+                <p className="text-[11px] sm:text-[12px] opacity-90 leading-relaxed">
                   Est. additional fees collected on time via WhatsApp payment links & reminders.
                 </p>
               </div>
@@ -382,9 +382,9 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
                 <div className="absolute top-0 right-0 p-3 opacity-10">
                   <ShieldCheck className="h-16 w-16 sm:h-20 sm:w-20" />
                 </div>
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold opacity-90">Paper & Printing Saved</span>
+                <span className="text-[11px] sm:text-xs uppercase tracking-wider font-bold opacity-90">Paper & Printing Saved</span>
                 <div className="text-2xl sm:text-3xl font-black">₹{(calculatedMetrics.paperSavedINR / 100000).toFixed(2)} Lakhs</div>
-                <p className="text-[10px] sm:text-[11px] opacity-90 leading-relaxed">
+                <p className="text-[11px] sm:text-[12px] opacity-90 leading-relaxed">
                   Direct cost reduction in printing report cards, notice sheets & circulars.
                 </p>
               </div>
@@ -394,9 +394,9 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
                 <div className="absolute top-0 right-0 p-3 opacity-10">
                   <Zap className="h-16 w-16 sm:h-20 sm:w-20 text-indigo-300" />
                 </div>
-                <span className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-indigo-200">Admin Hours Freed</span>
+                <span className="text-[11px] sm:text-xs uppercase tracking-wider font-bold text-indigo-200">Admin Hours Freed</span>
                 <div className="text-2xl sm:text-3xl font-black text-white">{calculatedMetrics.adminHoursSaved.toLocaleString()} hrs</div>
-                <p className="text-[10px] sm:text-[11px] opacity-90 leading-relaxed">
+                <p className="text-[11px] sm:text-[12px] opacity-90 leading-relaxed">
                   Freed from manual register data entry, filing, and record retrieval.
                 </p>
               </div>
@@ -454,22 +454,22 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs">
                     {/* Before Column */}
                     <div className="bg-indigo-50/40 dark:bg-indigo-950/20 border border-indigo-100 dark:border-indigo-900/40 p-3 sm:p-4 rounded-2xl space-y-1.5 sm:space-y-2">
-                      <div className="flex items-center gap-1.5 font-bold text-indigo-900 dark:text-indigo-300 text-[11px] sm:text-xs">
+                      <div className="flex items-center gap-1.5 font-bold text-indigo-900 dark:text-indigo-300 text-[12px] sm:text-xs">
                         <XCircle className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-rose-500 shrink-0" />
                         <span>Traditional Method</span>
                       </div>
-                      <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-[11px]">
+                      <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-[12px]">
                         {item.before}
                       </p>
                     </div>
 
                     {/* After Column */}
                     <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50 border border-indigo-200 dark:border-indigo-800 p-3 sm:p-4 rounded-2xl space-y-1.5 sm:space-y-2">
-                      <div className="flex items-center gap-1.5 font-bold text-indigo-700 dark:text-indigo-300 text-[11px] sm:text-xs">
+                      <div className="flex items-center gap-1.5 font-bold text-indigo-700 dark:text-indigo-300 text-[12px] sm:text-xs">
                         <CheckCircle2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-500 shrink-0" />
                         <span>With EduTrio ERP</span>
                       </div>
-                      <p className="text-slate-800 dark:text-slate-100 font-semibold leading-relaxed text-[11px]">
+                      <p className="text-slate-800 dark:text-slate-100 font-semibold leading-relaxed text-[12px]">
                         {item.after}
                       </p>
                     </div>
@@ -484,19 +484,19 @@ export function BenefitsSection({ onScheduleDemo }: BenefitsSectionProps) {
         <div className="mt-8 sm:mt-16 pt-4 sm:pt-8 border-t border-indigo-100 dark:border-indigo-950 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 text-center">
           <div className="space-y-0.5 sm:space-y-1">
             <div className="text-xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400">500+</div>
-            <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium">Partner Schools Onboarded</div>
+            <div className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium">Partner Schools Onboarded</div>
           </div>
           <div className="space-y-0.5 sm:space-y-1">
             <div className="text-xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400">250,000+</div>
-            <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium">Active Students Managed</div>
+            <div className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium">Active Students Managed</div>
           </div>
           <div className="space-y-0.5 sm:space-y-1">
             <div className="text-xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400">99.8%</div>
-            <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium">Fee Recovery Accuracy</div>
+            <div className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium">Fee Recovery Accuracy</div>
           </div>
           <div className="space-y-0.5 sm:space-y-1">
             <div className="text-xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400">24/7</div>
-            <div className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium">WhatsApp Support</div>
+            <div className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium">WhatsApp Support</div>
           </div>
         </div>
       </div>

@@ -320,7 +320,7 @@ export function AiExamBuilderSection({ onGetStarted }: AiExamBuilderSectionProps
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16 space-y-2.5 sm:space-y-4">
-          <Badge className="bg-purple-100 hover:bg-purple-200 text-purple-700 border-purple-200 px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider rounded-full shadow-sm">
+          <Badge className="bg-purple-100 hover:bg-purple-200 text-purple-700 border-purple-200 px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-wider rounded-full shadow-sm">
             <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 mr-1.5 animate-pulse text-purple-600" />
             Next-Gen AI Capabilities
           </Badge>
@@ -365,7 +365,7 @@ export function AiExamBuilderSection({ onGetStarted }: AiExamBuilderSectionProps
                   </div>
                   <span 
                     className={cn(
-                      "absolute top-9 sm:top-12 left-1/2 -translate-x-1/2 text-[9px] sm:text-xs font-semibold tracking-wide uppercase transition-colors duration-300 text-center max-w-[65px] sm:max-w-none truncate",
+                      "absolute top-9 sm:top-12 left-1/2 -translate-x-1/2 text-[10px] sm:text-xs font-semibold tracking-wide uppercase transition-colors duration-300 text-center max-w-[65px] sm:max-w-none truncate",
                       isActive ? "text-indigo-600 font-bold" : "text-slate-500"
                     )}
                   >
@@ -393,10 +393,10 @@ export function AiExamBuilderSection({ onGetStarted }: AiExamBuilderSectionProps
                     </div>
                     <div>
                       <h3 className="font-bold text-sm sm:text-lg text-white">Interactive Console</h3>
-                      <p className="text-[10px] sm:text-xs text-slate-300">Set exam metadata and click Generate to see AI in action</p>
+                      <p className="text-[11px] sm:text-xs text-slate-300">Set exam metadata and click Generate to see AI in action</p>
                     </div>
                   </div>
-                  <Badge className="bg-indigo-500/20 text-indigo-300 border-indigo-500/30 text-[10px] sm:text-xs">
+                  <Badge className="bg-indigo-500/20 text-indigo-300 border-indigo-500/30 text-[11px] sm:text-xs">
                     Live Demo
                   </Badge>
                 </div>
@@ -1001,7 +1001,7 @@ export function AiExamBuilderSection({ onGetStarted }: AiExamBuilderSectionProps
                 <div className="pt-4 border-t border-white/10">
                   <div className="bg-indigo-900/40 rounded-xl p-4 border border-indigo-500/20 text-center space-y-2">
                     <div className="text-2xl font-extrabold text-amber-400">Save 20+ Hours / Month</div>
-                    <p className="text-[9px] text-indigo-200 uppercase tracking-widest font-bold font-sans">Estimated Average Time Saved Per Teacher</p>
+                    <p className="text-[10px] text-indigo-200 uppercase tracking-widest font-bold font-sans">Estimated Average Time Saved Per Teacher</p>
                   </div>
                 </div>
               </CardContent>

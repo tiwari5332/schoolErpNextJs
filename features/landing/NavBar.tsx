@@ -28,8 +28,8 @@ export function NavBar({ onGetStarted }: NavBarProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 font-sans">
       {/* Top Announcement Bar */}
-      <div className="bg-gradient-to-r from-indigo-700 via-purple-700 to-emerald-700 text-white text-[9px] sm:text-xs font-bold py-1.5 px-2 sm:px-4 text-center flex items-center justify-center gap-1 sm:gap-2 shadow-sm overflow-hidden">
-        <span className="bg-white/20 text-white px-1.5 py-0.5 rounded-full text-[8px] sm:text-[9px] font-black uppercase tracking-wider hidden md:inline-block shrink-0">
+      <div className="bg-gradient-to-r from-indigo-700 via-purple-700 to-emerald-700 text-white text-[10px] sm:text-xs font-bold py-1.5 px-2 sm:px-4 text-center flex items-center justify-center gap-1 sm:gap-2 shadow-sm overflow-hidden">
+        <span className="bg-white/20 text-white px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-wider hidden md:inline-block shrink-0">
           Limited Time Offer
         </span>
         <span className="truncate max-w-[240px] sm:max-w-none">
@@ -37,7 +37,7 @@ export function NavBar({ onGetStarted }: NavBarProps) {
         </span>
         <button
           onClick={handleGetStarted}
-          className="ml-1 bg-white text-indigo-900 hover:bg-slate-100 font-extrabold text-[8px] sm:text-[10px] uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md shadow-2xs transition-all cursor-pointer shrink-0"
+          className="ml-1 bg-white text-indigo-900 hover:bg-slate-100 font-extrabold text-[9px] sm:text-[11px] uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md shadow-2xs transition-all cursor-pointer shrink-0"
         >
           Claim →
         </button>
@@ -78,7 +78,7 @@ export function NavBar({ onGetStarted }: NavBarProps) {
               {/* Free Trial Button - Visible on ALL screens (mobile, tablet, desktop) */}
               <Button
                 onClick={handleGetStarted}
-                className="gradient-indigo text-white shadow-colored-indigo text-[10px] sm:text-xs md:text-sm px-2.5 sm:px-4 py-1 sm:py-2 font-bold shrink-0 rounded-lg sm:rounded-xl"
+                className="gradient-indigo text-white shadow-colored-indigo text-[11px] sm:text-xs md:text-sm px-2.5 sm:px-4 py-1 sm:py-2 font-bold shrink-0 rounded-lg sm:rounded-xl"
               >
                 <span className="hidden sm:inline">Start 1-Month Free Trial</span>
                 <span className="sm:hidden">Free Trial</span>
