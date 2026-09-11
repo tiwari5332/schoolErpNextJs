@@ -712,7 +712,7 @@ export function AiExamBuilderSection({ onGetStarted }: AiExamBuilderSectionProps
                     </div>
 
                     {/* High-Fidelity Exam Sheet Paper */}
-                    <div className="bg-white border border-slate-200 rounded-xl shadow-inner p-8 md:p-12 space-y-8 max-h-[550px] overflow-y-auto font-serif relative">
+                    <div className="bg-white border border-slate-200 rounded-xl shadow-inner p-4 sm:p-8 md:p-12 space-y-8 max-h-[550px] overflow-y-auto overflow-x-auto max-w-full touch-pan-x font-serif relative">
                       
                       {/* Watermark/Draft overlay for premium mock effect */}
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-100 font-extrabold text-[8vw] select-none pointer-events-none rotate-12 uppercase tracking-widest opacity-25">

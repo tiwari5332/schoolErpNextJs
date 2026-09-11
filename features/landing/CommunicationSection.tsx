@@ -623,12 +623,12 @@ export function CommunicationSection() {
 
             {/* Main Dashboard Mockup Card */}
             <div 
-              className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-[#F8FAFC]"
-              style={{ height: `${Math.max(260, 650 * scale)}px` }}
+              className="relative w-full rounded-2xl overflow-x-auto overflow-y-hidden max-w-full touch-pan-x shadow-2xl border border-slate-200 bg-[#F8FAFC]"
+              style={{ height: `${Math.max(280, 650 * Math.max(0.55, scale))}px` }}
             >
               <div 
-                className="absolute top-0 left-0 w-[960px] h-[650px] origin-top-left"
-                style={{ transform: `scale(${scale})` }}
+                className="absolute top-0 left-0 min-w-[850px] w-[960px] h-[650px] origin-top-left"
+                style={{ transform: `scale(${Math.max(0.55, scale)})` }}
               >
                 <div className="w-full h-full flex flex-col font-sans">
                   

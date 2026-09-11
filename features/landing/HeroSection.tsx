@@ -129,12 +129,12 @@ export function HeroSection({ onGetStarted, onScheduleDemo }: HeroSectionProps) 
             <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl" />
 
             <div
-              className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-200/80 bg-[#F8FAFC]"
-              style={{ height: `${700 * scale}px` }}
+              className="relative w-full rounded-2xl overflow-x-auto overflow-y-hidden max-w-full touch-pan-x shadow-2xl border border-slate-200/80 bg-[#F8FAFC]"
+              style={{ height: `${Math.max(300, 700 * Math.max(0.5, scale))}px` }}
             >
               <div
-                className="absolute top-0 left-0 w-[950px] h-[800px] origin-top-left"
-                style={{ transform: `scale(${scale})` }}
+                className="absolute top-0 left-0 min-w-[850px] w-[950px] h-[800px] origin-top-left"
+                style={{ transform: `scale(${Math.max(0.5, scale)})` }}
               >
                 <AdminDashboardMockup />
               </div>

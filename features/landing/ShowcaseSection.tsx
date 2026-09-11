@@ -434,12 +434,12 @@ export function ShowcaseSection({ onGetStarted }: ShowcaseSectionProps) {
             {/* Interactive Admin Mockup Right */}
             <div className="lg:col-span-7 lg:order-2 flex flex-col justify-center relative w-full select-none" ref={adminContainerRef}>
               <div 
-                className="relative w-full rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl border border-slate-200 bg-[#F8FAFC] min-h-[220px] sm:min-h-[300px]"
-                style={{ height: `${Math.max(220, 630 * adminScale)}px` }}
+                className="relative w-full rounded-2xl overflow-x-auto overflow-y-hidden max-w-full touch-pan-x shadow-xl sm:shadow-2xl border border-slate-200 bg-[#F8FAFC] min-h-[220px] sm:min-h-[300px]"
+                style={{ height: `${Math.max(220, 630 * Math.max(0.45, adminScale))}px` }}
               >
                 <div 
-                  className="absolute top-0 left-0 w-[960px] h-[630px] origin-top-left"
-                  style={{ transform: `scale(${Math.max(0.32, adminScale)})` }}
+                  className="absolute top-0 left-0 min-w-[850px] w-[960px] h-[630px] origin-top-left"
+                  style={{ transform: `scale(${Math.max(0.45, adminScale)})` }}
                 >
                   <AdminDashboardMockup />
                 </div>
@@ -454,12 +454,12 @@ export function ShowcaseSection({ onGetStarted }: ShowcaseSectionProps) {
             {/* Interactive Teacher Mockup Left */}
             <div className="lg:col-span-7 lg:order-1 flex flex-col justify-center relative w-full select-none" ref={teacherContainerRef}>
               <div 
-                className="relative w-full rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl border border-purple-200/80 bg-[#F8FAFC] min-h-[220px] sm:min-h-[280px]"
-                style={{ height: `${Math.max(220, 360 * teacherScale)}px` }}
+                className="relative w-full rounded-2xl overflow-x-auto overflow-y-hidden max-w-full touch-pan-x shadow-xl sm:shadow-2xl border border-purple-200/80 bg-[#F8FAFC] min-h-[220px] sm:min-h-[280px]"
+                style={{ height: `${Math.max(220, 360 * Math.max(0.55, teacherScale))}px` }}
               >
                 <div 
-                  className="absolute top-0 left-0 w-[550px] h-[360px] origin-top-left"
-                  style={{ transform: `scale(${Math.max(0.48, teacherScale)})` }}
+                  className="absolute top-0 left-0 min-w-[500px] w-[550px] h-[360px] origin-top-left"
+                  style={{ transform: `scale(${Math.max(0.55, teacherScale)})` }}
                 >
                   <TeacherPortalMockup />
                 </div>
@@ -551,12 +551,12 @@ export function ShowcaseSection({ onGetStarted }: ShowcaseSectionProps) {
             {/* Interactive Student Mockup Right */}
             <div className="lg:col-span-7 lg:order-2 flex flex-col justify-center relative w-full select-none" ref={studentContainerRef}>
               <div 
-                className="relative w-full rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl border border-cyan-200/80 bg-[#F8FAFC] min-h-[220px] sm:min-h-[280px]"
-                style={{ height: `${Math.max(220, 360 * studentScale)}px` }}
+                className="relative w-full rounded-2xl overflow-x-auto overflow-y-hidden max-w-full touch-pan-x shadow-xl sm:shadow-2xl border border-cyan-200/80 bg-[#F8FAFC] min-h-[220px] sm:min-h-[280px]"
+                style={{ height: `${Math.max(220, 360 * Math.max(0.55, studentScale))}px` }}
               >
                 <div 
-                  className="absolute top-0 left-0 w-[550px] h-[360px] origin-top-left"
-                  style={{ transform: `scale(${Math.max(0.48, studentScale)})` }}
+                  className="absolute top-0 left-0 min-w-[500px] w-[550px] h-[360px] origin-top-left"
+                  style={{ transform: `scale(${Math.max(0.55, studentScale)})` }}
                 >
                   <StudentPortalMockup />
                 </div>
@@ -571,12 +571,12 @@ export function ShowcaseSection({ onGetStarted }: ShowcaseSectionProps) {
             {/* Interactive Parent Mockup Left */}
             <div className="lg:col-span-7 lg:order-1 flex flex-col justify-center relative w-full select-none" ref={parentContainerRef}>
               <div 
-                className="relative w-full rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl border border-emerald-200/80 bg-[#F8FAFC] min-h-[220px] sm:min-h-[280px]"
-                style={{ height: `${Math.max(220, 360 * parentScale)}px` }}
+                className="relative w-full rounded-2xl overflow-x-auto overflow-y-hidden max-w-full touch-pan-x shadow-xl sm:shadow-2xl border border-emerald-200/80 bg-[#F8FAFC] min-h-[220px] sm:min-h-[280px]"
+                style={{ height: `${Math.max(220, 360 * Math.max(0.55, parentScale))}px` }}
               >
                 <div 
-                  className="absolute top-0 left-0 w-[550px] h-[360px] origin-top-left"
-                  style={{ transform: `scale(${Math.max(0.48, parentScale)})` }}
+                  className="absolute top-0 left-0 min-w-[500px] w-[550px] h-[360px] origin-top-left"
+                  style={{ transform: `scale(${Math.max(0.55, parentScale)})` }}
                 >
                   <ParentPortalMockup />
                 </div>
