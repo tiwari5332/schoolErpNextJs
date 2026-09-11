@@ -8,7 +8,8 @@ import {
   Search, 
   Bell, 
   Calendar,
-  ChevronDown
+  ChevronDown,
+  FileSpreadsheet
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -35,7 +36,7 @@ export function AdminDashboardMockup() {
             />
           </div>
           
-          <div className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-xs font-bold text-slate-600">
+          <div className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold text-slate-600">
             <Calendar className="h-4 w-4 text-indigo-500" />
             <span>Academic Year 2024-25</span>
             <ChevronDown className="h-3 w-3 text-slate-400" />
@@ -109,7 +110,7 @@ export function AdminDashboardMockup() {
           <div className="border border-slate-200 bg-white p-5 shadow-sm rounded-2xl flex flex-row justify-between items-start">
             <div className="space-y-2">
               <p className="text-xs text-amber-600 font-bold uppercase tracking-wider">Monthly Revenue</p>
-              <h5 className="text-3xl font-black text-slate-900 leading-none mt-1">$14,500</h5>
+              <h5 className="text-3xl font-black text-slate-900 leading-none mt-1">₹1,45,000</h5>
               <p className="text-xs text-emerald-655 text-emerald-600 font-semibold flex items-center gap-1 pt-0.5">
                 <span>↗ +8.1%</span>
                 <span className="text-slate-455 text-slate-450 font-normal">from last month</span>

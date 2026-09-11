@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, Video, GraduationCap, ShieldCheck, Lock, CheckCircle2, Users, Bell, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, Video, GraduationCap, ShieldCheck, Lock, CheckCircle2, Users, Bell, Clock, Sparkles, FileSpreadsheet } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -29,60 +29,75 @@ export function HeroSection({ onGetStarted, onScheduleDemo }: HeroSectionProps) 
 
   return (
     <section
-      className="pt-32 pb-20 px-6 bg-[#F8FAFC] border-b border-slate-200/50"
+      className="pt-28 sm:pt-36 pb-12 sm:pb-20 px-3 sm:px-6 bg-[#F8FAFC] border-b border-slate-200/50"
       aria-labelledby="hero-heading"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Left: Copy */}
-          <div className="space-y-8">
-            <Badge className="bg-white/80 backdrop-blur-sm border-indigo-200 text-indigo-700 px-4 py-2">
-              <Sparkles className="h-3 w-3 mr-1" aria-hidden="true" />
-              Transforming Education Through Technology
-            </Badge>
+          <div className="space-y-4 sm:space-y-8">
+            <div className="flex flex-wrap items-center gap-2 max-w-full">
+              <Badge className="bg-emerald-50 border border-emerald-200 text-emerald-800 px-3 py-1.5 font-bold shadow-xs text-[10px] sm:text-xs">
+                <Sparkles className="h-3.5 w-3.5 mr-1.5 text-emerald-600 animate-pulse shrink-0" />
+                <span>🎉 1-Month FREE Trial</span>
+              </Badge>
+              <Badge className="bg-indigo-50 border border-indigo-200 text-indigo-800 px-3 py-1.5 font-bold shadow-xs text-[10px] sm:text-xs">
+                <span>⚡ Free Data Migration (48 Hrs)</span>
+              </Badge>
+              <Badge className="bg-purple-50 border border-purple-200 text-purple-800 px-3 py-1.5 font-bold shadow-xs text-[10px] sm:text-xs">
+                <span>📊 1-Click Excel Reports</span>
+              </Badge>
+            </div>
             <div>
               <h1
                 id="hero-heading"
-                className="font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6 animate-none"
+                className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-3 sm:mb-6 animate-none leading-tight"
               >
                 The Complete School Management Platform
               </h1>
-              <p className="text-slate-600 leading-relaxed mb-8">
+              <p className="text-slate-600 text-xs sm:text-base leading-relaxed mb-4 sm:mb-8">
                 EduTrio empowers schools with AI-powered analytics, seamless
                 communication, comprehensive student management, and intelligent
                 automation. Everything you need to run a modern educational
                 institution in one powerful platform.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                onClick={onGetStarted}
-                size="lg"
-                className="gradient-indigo text-white shadow-colored-indigo hover:scale-[1.02] transition-all duration-200 cursor-pointer"
-              >
-                Start Free Trial
-                <ArrowRight className="h-5 w-5 ml-2" aria-hidden="true" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-slate-300 hover:bg-white cursor-pointer"
-                onClick={onScheduleDemo}
-              >
-                Schedule Demo
-                <Video className="h-5 w-5 ml-2" aria-hidden="true" />
-              </Button>
+            {/* Onboarding & Free Migration Callout Card */}
+            <div className="bg-gradient-to-r from-emerald-50/90 via-indigo-50/80 to-purple-50/80 border border-emerald-200/80 rounded-2xl p-3 sm:p-4 flex items-center gap-3 sm:gap-3.5 text-left shadow-xs">
+              <div className="h-9 w-9 sm:h-10 sm:w-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center font-black text-base sm:text-lg shadow-sm flex-shrink-0">
+                ⚡
+              </div>
+              <div className="text-xs">
+                <p className="font-extrabold text-slate-900 text-xs sm:text-sm">30-Day Risk-Free Trial & Free 48-Hour Migration</p>
+                <p className="text-slate-600 mt-0.5 leading-relaxed text-[11px] sm:text-xs">
+                  Try EduTrio free for 1 full month with no credit card required. Our team handles <strong>100% of your data migration</strong> from Excel or legacy software into EduTrio within 48 hours completely free!
+                </p>
+              </div>
             </div>
+
+            {/* 1-Click Report Generation & Excel Downloads Callout Card */}
+            <div className="bg-gradient-to-r from-indigo-50/90 via-purple-50/80 to-cyan-50/80 border border-indigo-200/80 rounded-2xl p-3 sm:p-4 flex items-center gap-3 sm:gap-3.5 text-left shadow-xs mt-2.5 sm:mt-3">
+              <div className="h-9 w-9 sm:h-10 sm:w-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black text-base sm:text-lg shadow-sm flex-shrink-0">
+                📊
+              </div>
+              <div className="text-xs">
+                <p className="font-extrabold text-slate-900 text-xs sm:text-sm">1-Click Report Generation & Excel Downloads</p>
+                <p className="text-slate-600 mt-0.5 leading-relaxed text-[11px] sm:text-xs">
+                  Generate comprehensive school administrative reports instantly. Export attendance records, fee ledgers, exam marksheets, and compliance analytics to <strong>Excel (.xlsx) and PDF format with just 1-click</strong>!
+                </p>
+              </div>
+            </div>
+
             {/* Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-slate-200">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 pt-4 sm:pt-8 border-t border-slate-200">
               {STATS.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <stat.icon
-                    className="h-6 w-6 text-indigo-600 mx-auto mb-2"
+                    className="h-5 w-5 sm:h-6 sm:w-6 text-indigo-600 mx-auto mb-1 sm:mb-2"
                     aria-hidden="true"
                   />
-                  <div className="font-bold text-slate-900">{stat.value}</div>
-                  <div className="text-xs text-slate-600">{stat.label}</div>
+                  <div className="font-bold text-slate-900 text-sm sm:text-base">{stat.value}</div>
+                  <div className="text-[11px] sm:text-xs text-slate-600">{stat.label}</div>
                 </div>
               ))}
             </div>

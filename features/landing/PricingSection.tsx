@@ -23,20 +23,20 @@ export function PricingSection({ onGetStarted }: PricingSectionProps) {
   const handleGetStarted = useCallback(() => onGetStarted(), [onGetStarted]);
 
   return (
-    <section id="pricing" className="py-20 px-6 bg-white border-b border-slate-200/50" aria-labelledby="pricing-heading">
+    <section id="pricing" className="py-10 sm:py-16 md:py-20 px-3 sm:px-6 bg-white border-b border-slate-200/50" aria-labelledby="pricing-heading">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           badge="Flexible Pricing"
           badgeClassName="bg-emerald-100 text-emerald-700"
           title="Choose the Perfect Plan for Your School"
           subtitle="Transparent pricing with no hidden fees. All plans include free onboarding and training"
-          className="mb-12"
+          className="mb-8 sm:mb-12"
         />
 
         {/* Billing Toggle */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-8 sm:mb-12">
           <div
-            className="inline-flex items-center gap-1 bg-slate-100 rounded-full p-1"
+            className="inline-flex items-center gap-1 bg-slate-100 rounded-full p-1 text-xs sm:text-sm"
             role="group"
             aria-label="Billing period"
           >
@@ -47,15 +47,15 @@ export function PricingSection({ onGetStarted }: PricingSectionProps) {
                 aria-checked={billing === period}
                 onClick={() => setBilling(period)}
                 className={cn(
-                  "px-6 py-2 rounded-full text-sm transition-all duration-200 capitalize",
+                  "px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm transition-all duration-200 capitalize cursor-pointer",
                   billing === period
-                    ? "bg-white shadow-md text-slate-900 font-medium"
+                    ? "bg-white shadow-md text-slate-900 font-bold"
                     : "text-slate-600 hover:text-slate-800"
                 )}
               >
                 {period}
                 {period === "yearly" && (
-                  <Badge className="ml-2 bg-emerald-100 text-emerald-700 text-xs">
+                  <Badge className="ml-1.5 sm:ml-2 bg-emerald-100 text-emerald-700 text-[10px] sm:text-xs">
                     Save 17%
                   </Badge>
                 )}
@@ -65,7 +65,7 @@ export function PricingSection({ onGetStarted }: PricingSectionProps) {
         </div>
 
         {/* Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {PRICING_PLANS.map((plan) => {
             const colors = COLOR_CLASSES[plan.color];
             return (
@@ -101,17 +101,17 @@ export function PricingSection({ onGetStarted }: PricingSectionProps) {
                   <div className="space-y-2">
                     {plan.price !== null ? (
                       <>
-                        <div className="flex items-baseline justify-center gap-2">
-                          <span className="font-bold text-slate-900">
-                            ${billing === "monthly" ? plan.price.monthly : plan.price.yearly}
+                        <div className="flex items-baseline justify-center gap-1">
+                          <span className="text-3xl font-extrabold text-slate-900">
+                            ₹{billing === "monthly" ? plan.price.monthly.toLocaleString('en-IN') : plan.price.yearly.toLocaleString('en-IN')}
                           </span>
-                          <span className="text-sm text-slate-600">
+                          <span className="text-sm text-slate-600 font-medium">
                             /{billing === "monthly" ? "month" : "year"}
                           </span>
                         </div>
                         {billing === "yearly" && (
-                          <p className="text-xs text-emerald-600">
-                            Save ${plan.price.monthly * 12 - plan.price.yearly}/year
+                          <p className="text-xs text-emerald-600 font-bold">
+                            Save ₹{(plan.price.monthly * 12 - plan.price.yearly).toLocaleString('en-IN')}/year
                           </p>
                         )}
                       </>

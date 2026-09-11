@@ -43,7 +43,7 @@ export function FaqSection() {
   return (
     <section 
       id="faq" 
-      className="py-24 px-6 bg-slate-50/70 border-b border-slate-200/50"
+      className="py-10 sm:py-16 md:py-24 px-3 sm:px-6 bg-slate-50/70 border-b border-slate-200/50"
       aria-labelledby="faq-heading"
     >
       <div className="max-w-4xl mx-auto">
@@ -52,7 +52,7 @@ export function FaqSection() {
           badgeClassName="bg-indigo-100 text-indigo-700"
           title="Frequently Asked Questions"
           subtitle="Everything you need to know about setting up and running EduTrio at your school"
-          className="mb-16"
+          className="mb-8 sm:mb-16"
         />
 
         <div className="space-y-4">

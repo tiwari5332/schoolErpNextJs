@@ -34,7 +34,7 @@ export const STATS: Stat[] = [
 export const PRICING_PLANS: PricingPlan[] = [
   {
     name: "Starter",
-    price: { monthly: 99, yearly: 990 },
+    price: { monthly: 1999, yearly: 19990 },
     description: "Perfect for small schools getting started",
     color: "indigo",
     popular: false,
@@ -57,12 +57,12 @@ export const PRICING_PLANS: PricingPlan[] = [
   },
   {
     name: "Professional",
-    price: { monthly: 249, yearly: 2490 },
+    price: { monthly: 2999, yearly: 29990 },
     description: "Most popular for growing institutions",
     color: "emerald",
     popular: true,
     features: [
-      { name: "Up to 2000 students",        included: true  },
+      { name: "Up to 1000 students",        included: true  },
       { name: "Student management",         included: true  },
       { name: "Attendance tracking",        included: true  },
       { name: "Parent portal",             included: true  },

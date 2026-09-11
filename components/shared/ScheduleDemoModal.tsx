@@ -212,8 +212,8 @@ export function ScheduleDemoModal({ isOpen, onClose }: ScheduleDemoModalProps) {
         </button>
 
         {!isSuccess ? (
-          <div className="p-8">
-            <div className="mb-6">
+          <div className="p-4 sm:p-8 max-h-[90vh] overflow-y-auto font-sans">
+            <div className="mb-4 sm:mb-6">
               <Badge className="bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 px-3 py-1 mb-2">
                 Live Consultation
               </Badge>

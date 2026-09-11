@@ -313,36 +313,36 @@ export function AiExamBuilderSection({ onGetStarted }: AiExamBuilderSectionProps
   return (
     <section 
       id="ai-builder"
-      className="py-24 px-6 bg-white overflow-hidden"
+      className="py-10 sm:py-16 md:py-24 px-3 sm:px-6 bg-white overflow-hidden font-sans"
       aria-labelledby="ai-builder-heading"
     >
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <Badge className="bg-purple-100 hover:bg-purple-200 text-purple-700 border-purple-200 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full shadow-sm">
-            <Sparkles className="h-3.5 w-3.5 mr-1.5 animate-pulse text-purple-600" />
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16 space-y-2.5 sm:space-y-4">
+          <Badge className="bg-purple-100 hover:bg-purple-200 text-purple-700 border-purple-200 px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider rounded-full shadow-sm">
+            <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5 mr-1.5 animate-pulse text-purple-600" />
             Next-Gen AI Capabilities
           </Badge>
-          <h2 id="ai-builder-heading" className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-none">
+          <h2 id="ai-builder-heading" className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             AI Exam Paper Generator
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed font-normal">
+          <p className="text-xs sm:text-base md:text-lg text-slate-600 leading-relaxed font-normal">
             Empower educators with an intelligent exam architect. Design high-fidelity, customized assessment papers aligned perfectly with school curricula in just seconds.
           </p>
         </div>
 
         {/* Dynamic Stepper Header */}
-        <div className="relative max-w-4xl mx-auto mb-12">
-          {/* Progress bar background line */}
-          <div className="absolute top-5 left-0 right-0 h-0.5 bg-slate-200 -translate-y-1/2" />
-          {/* Active progress fill line */}
-          <div 
-            className="absolute top-5 left-0 h-0.5 bg-indigo-600 -translate-y-1/2 transition-all duration-500 ease-in-out" 
-            style={{ width: `${((step - 1) / 3) * 100}%` }}
-          />
+        <div className="relative max-w-4xl mx-auto mb-10 sm:mb-16 px-2 sm:px-4">
+          <div className="relative flex justify-between items-center z-10">
+            {/* Progress bar background line */}
+            <div className="absolute top-4 sm:top-5 left-4 sm:left-5 right-4 sm:right-5 h-0.5 bg-slate-200 -translate-y-1/2 z-0" />
+            {/* Active progress fill line */}
+            <div 
+              className="absolute top-4 sm:top-5 left-4 sm:left-5 h-0.5 bg-indigo-600 -translate-y-1/2 transition-all duration-500 ease-in-out z-0" 
+              style={{ width: `calc((100% - 2rem) * ${(step - 1) / 3})` }}
+            />
 
-          <div className="relative flex justify-between z-10">
             {[
               { num: 1, label: "Configure" },
               { num: 2, label: "Generate" },
@@ -352,20 +352,20 @@ export function AiExamBuilderSection({ onGetStarted }: AiExamBuilderSectionProps
               const isActive = step === num;
               const isCompleted = step > num;
               return (
-                <div key={num} className="flex flex-col items-center">
+                <div key={num} className="relative flex flex-col items-center z-10">
                   <div 
                     className={cn(
-                      "w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 shadow-md",
-                      isActive && "bg-indigo-600 text-white ring-4 ring-indigo-100 border-2 border-indigo-600",
+                      "w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm transition-all duration-300 shadow-md",
+                      isActive && "bg-indigo-600 text-white ring-2 sm:ring-4 ring-indigo-100 border-2 border-indigo-600",
                       isCompleted && "bg-emerald-500 text-white",
                       !isActive && !isCompleted && "bg-white border-2 border-slate-200 text-slate-500"
                     )}
                   >
-                    {isCompleted ? <Check className="h-5 w-5" /> : num}
+                    {isCompleted ? <Check className="h-4 w-4 sm:h-5 sm:w-5" /> : num}
                   </div>
                   <span 
                     className={cn(
-                      "mt-2 text-xs font-semibold tracking-wide uppercase transition-colors duration-300",
+                      "absolute top-9 sm:top-12 left-1/2 -translate-x-1/2 text-[9px] sm:text-xs font-semibold tracking-wide uppercase transition-colors duration-300 text-center max-w-[65px] sm:max-w-none truncate",
                       isActive ? "text-indigo-600 font-bold" : "text-slate-500"
                     )}
                   >
@@ -378,36 +378,36 @@ export function AiExamBuilderSection({ onGetStarted }: AiExamBuilderSectionProps
         </div>
 
         {/* Feature Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start pt-4">
           
           {/* Left Column: Interactive AI Exam Builder Console */}
-          <div className="lg:col-span-8">
-            <Card className="border-0 shadow-2xl overflow-hidden bg-white/80 backdrop-blur-md rounded-2xl ring-1 ring-slate-100">
+          <div className="lg:col-span-8 lg:order-1">
+            <Card className="border-0 shadow-xl sm:shadow-2xl overflow-hidden bg-white/80 backdrop-blur-md rounded-2xl ring-1 ring-slate-100">
               <CardContent className="p-0">
                 
                 {/* Panel Header */}
-                <div className="bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-600 p-6 text-white flex justify-between items-center">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-xl bg-purple-500/20 text-purple-400">
-                      <Sparkles className="h-6 w-6 animate-pulse" />
+                <div className="bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-600 p-4 sm:p-6 text-white flex justify-between items-center">
+                  <div className="flex items-center gap-2.5 sm:gap-3">
+                    <div className="p-1.5 sm:p-2 rounded-xl bg-purple-500/20 text-purple-400">
+                      <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 animate-pulse" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg text-white">Interactive Console</h3>
-                      <p className="text-xs text-slate-300">Set exam metadata and click Generate to see AI in action</p>
+                      <h3 className="font-bold text-sm sm:text-lg text-white">Interactive Console</h3>
+                      <p className="text-[10px] sm:text-xs text-slate-300">Set exam metadata and click Generate to see AI in action</p>
                     </div>
                   </div>
-                  <Badge className="bg-indigo-500/20 text-indigo-300 border-indigo-500/30">
+                  <Badge className="bg-indigo-500/20 text-indigo-300 border-indigo-500/30 text-[10px] sm:text-xs">
                     Live Demo
                   </Badge>
                 </div>
 
                 {/* Step 1: Form Configuration */}
                 {step === 1 && (
-                  <div className="p-6 md:p-8 space-y-6">
+                  <div className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6">
                     {/* Exam Type Tabs */}
-                    <div className="space-y-2">
+                    <div className="space-y-1.5 sm:space-y-2">
                       <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Exam Type</label>
-                      <div className="grid grid-cols-3 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                         {[
                           { type: "Full Exam", icon: GraduationCap },
                           { type: "Quiz", icon: Sparkles },
@@ -418,7 +418,7 @@ export function AiExamBuilderSection({ onGetStarted }: AiExamBuilderSectionProps
                             type="button"
                             onClick={() => setExamType(type as any)}
                             className={cn(
-                              "flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-300 hover:bg-slate-50 border cursor-pointer",
+                              "flex items-center justify-center gap-2 py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 hover:bg-slate-50 border cursor-pointer",
                               examType === type 
                                 ? "bg-indigo-50 border-indigo-600 text-indigo-700 shadow-sm ring-1 ring-indigo-600" 
                                 : "bg-white border-slate-200 text-slate-600"
@@ -940,8 +940,8 @@ export function AiExamBuilderSection({ onGetStarted }: AiExamBuilderSectionProps
             </Card>
           </div>
 
-          {/* Right Column: Highlighted Benefits for Schools */}
-          <div className="lg:col-span-4 space-y-6">
+          {/* Right Column: Highlighted Benefits for Schools (Right side on desktop) */}
+          <div className="lg:col-span-4 lg:order-2 space-y-6">
             
             {/* Main benefits card */}
             <Card className="border-0 shadow-xl bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-600 text-white rounded-2xl overflow-hidden relative">

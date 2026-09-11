@@ -118,7 +118,7 @@ export function FeeManagementSection() {
     if (!containerRef.current) return;
     const updateScale = () => {
       const parentWidth = containerRef.current?.getBoundingClientRect().width || 500;
-      setScale(parentWidth / 960);
+      setScale(Math.max(0.38, parentWidth / 960));
     };
 
     updateScale();
@@ -145,22 +145,22 @@ export function FeeManagementSection() {
     : records.filter(r => r.balance > 0);
 
   return (
-    <section id="fees" className="py-20 px-6 bg-white border-b border-slate-200/50 scroll-mt-20">
+    <section id="fees" className="py-10 sm:py-16 md:py-20 px-3 sm:px-6 bg-white border-b border-slate-200/50 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 items-center">
           
           {/* Left: Product Value & Copy */}
-          <div className="lg:col-span-5 space-y-8 text-left">
-            <Badge className="bg-emerald-50 text-emerald-700 border-emerald-200 px-4 py-2 font-semibold">
+          <div className="lg:col-span-5 lg:order-2 space-y-6 sm:space-y-8 text-left">
+            <Badge className="bg-emerald-50 text-emerald-700 border-emerald-200 px-3 sm:px-4 py-1.5 sm:py-2 font-semibold text-xs">
               <CreditCard className="h-3.5 w-3.5 mr-1.5" />
               Automated Fee Management
             </Badge>
 
-            <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            <div className="space-y-3 sm:space-y-4">
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
                 Collect Fees 3x Faster with Smart Recovery
               </h2>
-              <p className="text-slate-650 text-slate-650 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed text-xs sm:text-sm">
                 Manually tracking payments, calculate late fees, and calling parents is exhausting. EduTrio digitizes the entire fee ledger, automates due reminders, and connects you to parents directly.
               </p>
             </div>
@@ -172,7 +172,7 @@ export function FeeManagementSection() {
                   <CheckCircle2 className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-sm">Automated Pre-Due Alerts</h4>
+                  <h4 className="font-bold text-slate-800 text-xs sm:text-sm">Automated Pre-Due Alerts</h4>
                   <p className="text-xs text-slate-500 mt-0.5">Sends automated notifications to parents 3 days before payment due dates, avoiding penalty friction.</p>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export function FeeManagementSection() {
                   <CheckCircle2 className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-sm">1-Click Bulk Reminder Broadcasts</h4>
+                  <h4 className="font-bold text-slate-800 text-xs sm:text-sm">1-Click Bulk Reminder Broadcasts</h4>
                   <p className="text-xs text-slate-500 mt-0.5">Send bulk reminders to all parents with unpaid accounts instantly via SMS, WhatsApp, and parent app push alerts.</p>
                 </div>
               </div>
@@ -192,7 +192,7 @@ export function FeeManagementSection() {
                   <CheckCircle2 className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-sm">Direct In-App Dialing</h4>
+                  <h4 className="font-bold text-slate-800 text-xs sm:text-sm">Direct In-App Dialing</h4>
                   <p className="text-xs text-slate-500 mt-0.5">Access a filtered list of outstanding balances and initiate calls to parents directly from the interface.</p>
                 </div>
               </div>
@@ -202,14 +202,14 @@ export function FeeManagementSection() {
                   <CheckCircle2 className="h-3.5 w-3.5" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-800 text-sm">Late Fees & Discount Logic</h4>
+                  <h4 className="font-bold text-slate-800 text-xs sm:text-sm">Late Fees & Discount Logic</h4>
                   <p className="text-xs text-slate-500 mt-0.5">Auto-calculate discounts (scholarships, siblings) and add late penalties accurately based on due date grace periods.</p>
                 </div>
               </div>
             </div>
 
             {/* Interactive hint callout */}
-            <div className="bg-emerald-50/50 border border-emerald-150 border-emerald-200/50 rounded-xl p-4 flex gap-3 text-xs text-slate-650 leading-relaxed font-sans shadow-2xs">
+            <div className="bg-emerald-50/50 border border-emerald-200/50 rounded-xl p-3 sm:p-4 flex gap-3 text-xs text-slate-650 leading-relaxed font-sans shadow-2xs">
               <span className="text-base">💡</span>
               <p>
                 <strong>Interactive Demo:</strong> Try clicking the <strong>&quot;Outstanding Dues&quot;</strong> tab or the <strong>Bell/Phone</strong> action icons in the simulated dashboard mockup to see fee workflows in action!
@@ -218,20 +218,20 @@ export function FeeManagementSection() {
           </div>
 
           {/* Right: Simulated Fee Screen Mockup */}
-          <div className="lg:col-span-7 flex flex-col justify-center relative w-full select-none" ref={containerRef}>
+          <div className="lg:col-span-7 lg:order-1 flex flex-col justify-center relative w-full select-none" ref={containerRef}>
             
             {/* Simulation Notification Toast */}
             {toastMessage && (
               <div className="absolute top-2 left-1/2 -translate-x-1/2 z-55 bg-slate-900 border border-slate-800 text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 max-w-sm w-11/12 animate-fade-in">
-                <Send className="h-4 w-4 text-emerald-450 text-emerald-400 flex-shrink-0" />
+                <Send className="h-4 w-4 text-emerald-400 flex-shrink-0" />
                 <span className="flex-grow text-left leading-normal">{toastMessage}</span>
               </div>
             )}
 
-            {/* Calling Modal simulation overlay */}
+            {/* Calling Modal simulation overlay (Viewport Fixed) */}
             {callingStudent && (
-              <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-xs rounded-2xl z-50 flex items-center justify-center p-6 animate-fade-in">
-                <div className="bg-slate-900 text-white border border-slate-800 rounded-xl p-6 max-w-xs w-full text-center space-y-4 shadow-2xl relative">
+              <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 flex items-center justify-center p-4 overflow-y-auto animate-fade-in">
+                <div className="bg-slate-900 text-white border border-slate-800 rounded-2xl p-6 max-w-xs w-full text-center space-y-4 shadow-2xl relative font-sans">
                   <button 
                     onClick={() => setCallingStudent(null)}
                     className="absolute top-3 right-3 text-slate-400 hover:text-white"
@@ -262,7 +262,7 @@ export function FeeManagementSection() {
             {/* Dashboard Mockup wrapper */}
             <div 
               className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-[#F8FAFC]"
-              style={{ height: `${630 * scale}px` }}
+              style={{ height: `${Math.max(250, 630 * scale)}px` }}
             >
               <div 
                 className="absolute top-0 left-0 w-[960px] h-[630px] origin-top-left"

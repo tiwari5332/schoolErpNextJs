@@ -8,7 +8,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-20 px-6 bg-slate-50/70 border-b border-slate-200/50"
+      className="py-10 sm:py-16 md:py-20 px-3 sm:px-6 bg-slate-50/70 border-b border-slate-200/50"
       aria-labelledby="testimonials-heading"
     >
       <div className="max-w-7xl mx-auto">
@@ -18,7 +18,7 @@ export function TestimonialsSection() {
           title="Trusted by Educational Leaders"
           subtitle="See what school administrators and educators are saying about EduTrio"
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {TESTIMONIALS.map((t) => (
             <Card key={t.name} className="border-0 shadow-lg glass-card hover-lift">
               <CardContent className="p-6 space-y-4">

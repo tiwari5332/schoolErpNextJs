@@ -16,11 +16,11 @@ export function CtaSection({ onGetStarted, onScheduleDemo }: CtaSectionProps) {
   return (
     <section
       id="demo"
-      className="py-20 px-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700"
+      className="py-10 sm:py-16 md:py-20 px-3 sm:px-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700"
       aria-labelledby="cta-heading"
     >
       <div className="max-w-4xl mx-auto text-center text-white">
-        <h2 id="cta-heading" className="font-bold mb-6">
+        <h2 id="cta-heading" className="text-2xl sm:text-4xl font-extrabold mb-4 sm:mb-6 tracking-tight">
           Ready to Transform Your School?
         </h2>
         <p className="text-indigo-100 mb-8 leading-relaxed">
